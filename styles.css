@@ -644,6 +644,7 @@ a.svc .svc-body { padding-right: 70px; }
   .who-grid { grid-template-columns: 1fr; }
   .who-card:nth-child(even) { transform: none; }
   .performer { min-height: 520px; align-items: flex-end; }
+  .performer > img { object-position: 25% center; }
   .performer::before { background: linear-gradient(0deg, rgba(0, 19, 49, 0.94) 10%, rgba(0, 19, 49, 0.4) 60%, rgba(0, 19, 49, 0.1)); }
   .performer-copy { padding: 28px 24px; }
 }
