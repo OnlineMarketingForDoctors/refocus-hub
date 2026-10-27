@@ -509,7 +509,7 @@ p { margin: 0 0 1em; }
 .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .svc { position: relative; display: flex; align-items: flex-end; min-height: 300px; border-radius: var(--r-lg); overflow: hidden; isolation: isolate; color: #fff; text-decoration: none; background: var(--navy); box-shadow: var(--shadow-soft); transition: box-shadow 0.3s, transform 0.3s; }
 .svc > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
-.svc::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(0, 19, 49, 0) 25%, rgba(0, 19, 49, 0.82) 72%, rgba(0, 19, 49, 0.94)); transition: opacity 0.3s; }
+.svc::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(0, 19, 49, 0) 12%, rgba(0, 19, 49, 0.6) 38%, rgba(0, 19, 49, 0.93) 60%, rgba(0, 19, 49, 0.97)); }
 .svc:hover, .svc:focus-within { box-shadow: var(--shadow-lift); transform: translateY(-4px); }
 .svc:hover > img, .svc:focus-within > img { transform: scale(1.07); }
 .svc-body { position: relative; padding: 22px 22px 22px; width: 100%; }
@@ -521,9 +521,6 @@ a.svc .svc-body { padding-right: 70px; }
 .svc-go { position: absolute; right: 18px; bottom: 22px; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--raspberry); color: #fff; transition: transform 0.25s; }
 .svc-go svg { width: 16px; height: 16px; }
 .svc:hover .svc-go { transform: translateX(3px); }
-.svc-links { display: flex; gap: 8px; margin-top: 14px; }
-.svc-links a { padding: 7px 14px; border-radius: 999px; background: rgba(255, 255, 255, 0.95); color: var(--navy); font-weight: 800; font-size: 0.84rem; text-decoration: none; transition: background-color 0.2s, color 0.2s; }
-.svc-links a:hover { background: var(--raspberry); color: #fff; }
 .qeeg-band { position: relative; display: grid; grid-template-columns: 300px 1fr; align-items: center; gap: 40px; margin: 56px 0; padding: 40px 48px 40px 40px; border-radius: var(--r-xl); overflow: visible; color: #fff; text-decoration: none; background: var(--navy); box-shadow: var(--shadow-lift); isolation: isolate; }
 .qeeg-band-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-xl); z-index: -1; opacity: 0.85; }
 .qeeg-band-img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r-lg); margin: -90px 0 -90px; box-shadow: 0 40px 70px -30px rgba(0, 0, 0, 0.8); border: 6px solid rgba(255, 255, 255, 0.9); transform: rotate(-3deg); transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1); }
