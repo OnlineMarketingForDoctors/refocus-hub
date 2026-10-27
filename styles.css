@@ -660,6 +660,8 @@ a.svc .svc-body { padding-right: 70px; }
 
 /* ---------- Founder additions ---------- */
 .founder blockquote { font-size: clamp(1.4rem, 2.2vw, 1.95rem); }
+.founder-media { padding-bottom: 0; }
+.founder-media .main { width: 100%; max-width: 520px; aspect-ratio: 4 / 5; }
 .founder .founder-body p { font-size: 1rem; }
 .founder-close { font-family: var(--serif); font-size: 1.3rem !important; color: #f7c4d8 !important; }
 
