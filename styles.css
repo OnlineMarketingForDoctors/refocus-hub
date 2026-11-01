@@ -496,7 +496,7 @@ p { margin: 0 0 1em; }
 @media (max-width: 640px) { .diff-photo { aspect-ratio: 4 / 3; } .diff-cards { grid-template-columns: 1fr; margin: -70px 12px 0; } }
 
 /* ---------- Services: photo tiles around a qEEG band ---------- */
-.services { background: var(--porcelain); }
+.services { background: var(--turquoise-wash); }
 .svc-group { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: start; }
 .svc-label { position: sticky; top: calc(var(--header-h) + 24px); }
 .svc-label p { margin: 14px 0 0; font-family: var(--serif); font-style: italic; font-size: 1.25rem; line-height: 1.35; color: var(--ink-soft); }
