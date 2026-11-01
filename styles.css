@@ -339,7 +339,7 @@ p { margin: 0 0 1em; }
 .faq-aside { position: sticky; top: calc(var(--header-h) + 30px); }
 .faq-aside .help { margin-top: 28px; display: flex; gap: 16px; align-items: center; background: #fff; border-radius: var(--r-md); padding: 18px; box-shadow: var(--shadow-soft); }
 .faq-aside .help img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: center 20%; }
-.faq-aside .help a { font-weight: 800; color: var(--raspberry); text-decoration: none; }
+.faq-aside .help a { font-weight: 800; color: var(--turquoise); text-decoration: none; }
 .accordion { display: grid; gap: 12px; }
 .acc-item { background: #fff; border-radius: var(--r-md); box-shadow: 0 10px 30px -22px rgba(0, 19, 49, 0.5); border: 1px solid var(--line); overflow: hidden; }
 .acc-item h3 { margin: 0; font-family: var(--sans); font-size: 1.05rem; letter-spacing: 0; }
