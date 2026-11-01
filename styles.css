@@ -614,7 +614,7 @@ a.svc .svc-body { padding-right: 70px; }
 }
 
 /* ---------- Who we support: staggered photo cards ---------- */
-.who { background: var(--mist); overflow: hidden; padding-top: clamp(130px, 14vw, 190px); }
+.who { background: var(--turquoise-wash); overflow: hidden; }
 .who h2 { font-size: clamp(2.1rem, 4vw, 3.5rem); }
 .who-quote { font-family: var(--serif); font-size: clamp(1.25rem, 1.8vw, 1.55rem); line-height: 1.45; color: var(--ink-soft); margin: 0; }
 .who-quote em { color: var(--raspberry-dark); }
