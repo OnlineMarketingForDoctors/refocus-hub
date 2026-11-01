@@ -593,8 +593,8 @@ a.svc .svc-body { padding-right: 70px; }
 .ap-step::before { content: ""; position: absolute; left: 27px; top: 0; bottom: 0; width: 2px; background: repeating-linear-gradient(var(--raspberry-soft) 0 6px, transparent 6px 14px); }
 .ap-step:first-child::before { top: 40px; }
 .ap-step:last-child::before { bottom: auto; height: 12vh; }
-.ap-num { position: absolute; left: 0; top: calc(12vh + 2px); width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: 1.6rem; background: #fff; color: var(--raspberry); box-shadow: var(--shadow-soft); transition: background-color 0.4s, color 0.4s; }
-.ap-step.is-active .ap-num { background: var(--raspberry); color: #fff; }
+.ap-num { position: absolute; left: 0; top: calc(12vh + 2px); width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: 1.6rem; background: #fff; color: var(--navy); box-shadow: var(--shadow-soft), inset 0 0 0 2px var(--turquoise); transition: background-color 0.4s, color 0.4s; }
+.ap-step.is-active .ap-num { background: var(--turquoise); color: var(--navy); }
 .ap-step h3 { font-size: clamp(2rem, 3.2vw, 2.8rem); margin-bottom: 6px; }
 .ap-lead { font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--raspberry); margin-bottom: 14px; }
 .ap-step p { color: var(--ink-soft); max-width: 56ch; }
