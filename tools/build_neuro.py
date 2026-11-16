@@ -533,7 +533,7 @@ def meds():
     sections = [
         soon_section('start', 'This pathway is opening soon', 'Our ADHD medication pathway is pending CQC registration. Leave your details and we’ll let you know as soon as it opens. In the meantime, our team is happy to talk through your options.', 'ADHD medication pathway: notify me'),
         sec('nc-what', 'what-title', 'What the pathway will include', 'Safe, structured ADHD prescribing', 'For individuals diagnosed with ADHD, we will offer a structured medication pathway across adolescence and adulthood, with collaborative, individualised medication decisions.',
-            split(collage('/img/svc-medication.webp', '/img/hero-meds.webp', 'A nurse practitioner talks through a care plan with a patient', 'A nurse practitioner checks a patient’s blood pressure'),
+            split(collage('/img/svc-medication.webp', '/img/svc-coaching.webp', 'A nurse practitioner talks through a care plan with a patient', 'Two people smiling while planning together with sticky notes'),
                   features([('i-doc', 'Discussion &amp; informed consent', 'Medication discussion and informed consent, so every decision is shared.'),
                             ('i-path', 'Careful initiation &amp; titration', 'Starting gently and adjusting carefully to find what works for you.'),
                             ('i-calendar', 'Regular monitoring', 'Regular monitoring appointments with side-effect and response tracking.'),
