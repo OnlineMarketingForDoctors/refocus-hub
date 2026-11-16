@@ -174,3 +174,42 @@
     });
   });
 })();
+
+/* ---------- Blog article: reading progress, contents tracking, copy link ---------- */
+(function () {
+  'use strict';
+  var body = document.querySelector('.ar-body');
+  if (!body) return;
+  var bar = document.querySelector('.ar-progress span');
+  var ticking = false;
+  function update() {
+    var r = body.getBoundingClientRect();
+    var total = r.height - window.innerHeight * 0.6;
+    var p = Math.min(1, Math.max(0, -r.top / (total > 0 ? total : 1)));
+    if (bar) bar.style.transform = 'scaleX(' + p + ')';
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  update();
+
+  var links = Array.prototype.slice.call(document.querySelectorAll('.ar-toc a'));
+  if (links.length && 'IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) { a.classList.toggle('is-active', a.getAttribute('href') === '#' + e.target.id); });
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    links.forEach(function (a) { var h = document.getElementById(a.getAttribute('href').slice(1)); if (h) spy.observe(h); });
+  }
+  var toc = document.querySelector('.ar-toc details');
+  if (toc && window.matchMedia('(max-width: 1000px)').matches) toc.open = false;
+
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var tip = btn.querySelector('.ar-copied');
+      var done = function () { if (tip) { tip.textContent = 'Link copied'; tip.classList.add('is-on'); setTimeout(function () { tip.classList.remove('is-on'); }, 1800); } };
+      if (navigator.clipboard) navigator.clipboard.writeText(btn.getAttribute('data-copy')).then(done, done); else done();
+    });
+  });
+})();

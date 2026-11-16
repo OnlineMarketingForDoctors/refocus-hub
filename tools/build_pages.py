@@ -402,7 +402,7 @@ def contact_page():
 
 # ---------------------------------------------------------------- Blog data
 POSTS = [
-    ('Can Hormone Therapy Improve Neurodivergent Symptoms?', 'https://refocushub.co.uk/can-hormone-therapy-improve-neurodivergent-symptoms/', 'hormone-therapy', 'Mindfulness', 'June 25, 2026', '2026-06-25',
+    ('Can Hormone Therapy Improve Neurodivergent Symptoms?', '/can-hormone-therapy-improve-neurodivergent-symptoms/', 'hormone-therapy', 'Mindfulness', 'June 25, 2026', '2026-06-25',
      'Even though the link between hormones and mood has been studied for over a century, it was only in the early 2000s that their direct influence over neurodivergent symptoms was'),
     ('Autism in Adults: What It Looks Like and How to Get a Diagnosis?', 'https://refocushub.co.uk/autism-in-adults-what-it-looks-like-and-diagnosis/', 'autism-adults', 'ADHD', 'June 11, 2026', '2026-06-11',
      'According to the World Health Organization (WHO), roughly one in 100 people are on the autism spectrum. However, these figures only scratch the surface, since a vast majority remain undiagnosed'),
@@ -426,7 +426,7 @@ POSTS = [
      'Exomind® &amp; Transcranial Magnetic Stimulation (TMS) From established psychiatric treatment to modern brain wellbeing Transcranial Magnetic Stimulation (TMS) often sounds like a new or experimental technology, but in reality it'),
 ]
 # Images that are too small or too wide to fill a card get a stronger substitute; the original still shows on the article itself.
-CARD_IMG = {'adhd-midlife': '/img/who-woman.webp', 'exomind-tms': '/img/svc-neuromod.webp'}
+CARD_IMG = {'adhd-midlife': '/img/who-woman.webp', 'exomind-tms': '/img/svc-neuromod.webp', 'autism-adults': '/img/adult-autism.webp'}
 
 
 def post_card(p, cls='bl-card'):
