@@ -9,7 +9,7 @@ from html import escape
 
 REPO = sys.argv[1] if len(sys.argv) > 1 else '.'
 HOME = open(f'{REPO}/index.html', encoding='utf8').read()
-FREE_CALL = 'https://refocushub.co.uk/free-consultation/'
+FREE_CALL = '/free-consultation/'
 
 EXTRA_ICONS = '''    <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 9l7 7 7-7"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 6 8-6"/></g></symbol>

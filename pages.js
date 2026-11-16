@@ -107,7 +107,7 @@
   }
 
   /* ---------- Forms: validate, then open the visitor's email app with the message filled in ---------- */
-  var messages = { name: 'Enter your name.', email: 'Enter an email address like name@example.com.', message: 'Tell us a little about your question.' };
+  var messages = { name: 'Enter your name.', first: 'Enter your first name.', last: 'Enter your last name.', email: 'Enter an email address like name@example.com.', phone: 'Enter a phone number we can reach you on.', source: 'Choose how you heard about us.', message: 'Tell us a little about your question.' };
   document.querySelectorAll('form[data-mailto]').forEach(function (form) {
     var status = form.querySelector('.pg-form-status');
     function validate(el) {
