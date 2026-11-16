@@ -134,6 +134,7 @@
 /* ---------- Founder message ---------- */
 .ab-message { isolation: isolate; }
 .ab-message .founder-media .main { width: 100%; max-width: 520px; aspect-ratio: 4 / 5; }
+.ab-message .ab-msg-img { object-fit: cover; object-position: 34% center; }
 .ab-message .founder-media { padding-bottom: 0; }
 .ab-message .kicker { color: var(--turquoise-light); }
 .ab-msg-pull { font-family: var(--serif); font-size: 1.35rem !important; line-height: 1.4; color: #fff !important; border-left: 3px solid var(--turquoise); padding-left: 18px; }
