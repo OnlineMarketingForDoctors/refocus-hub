@@ -155,3 +155,22 @@
     });
   });
 })();
+
+/* ---------- Assessment pages: expandable process steps ---------- */
+(function () {
+  'use strict';
+  document.querySelectorAll('[data-steps]').forEach(function (list) {
+    var items = Array.prototype.slice.call(list.querySelectorAll('.dx-step'));
+    items.forEach(function (item) {
+      var btn = item.querySelector('.dx-step-btn');
+      btn.addEventListener('click', function () {
+        var open = !item.classList.contains('is-open');
+        items.forEach(function (o) {
+          var on = o === item ? open : false;
+          o.classList.toggle('is-open', on);
+          o.querySelector('.dx-step-btn').setAttribute('aria-expanded', String(on));
+        });
+      });
+    });
+  });
+})();

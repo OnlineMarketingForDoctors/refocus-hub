@@ -7,7 +7,7 @@ import re
 import sys
 from html import escape
 
-REPO = sys.argv[1]
+REPO = sys.argv[1] if len(sys.argv) > 1 else '.'
 HOME = open(f'{REPO}/index.html', encoding='utf8').read()
 FREE_CALL = 'https://refocushub.co.uk/free-consultation/'
 
@@ -135,29 +135,29 @@ def prices_page():
     kids = [
         price_card('Child &amp; Adolescent ADHD Assessments', '/img/svc-adhd.webp', [
             price_opt('Virtual ADHD assessment', '£750', '£890', 'Save £140', L + '3'),
-            price_opt('Face-to-face ADHD assessment', '£850', '£1,150', 'Save £300', L + '4')], 'https://refocushub.co.uk/diagnosis-main-page/child-adolescent-adhd/', lvl='h4'),
+            price_opt('Face-to-face ADHD assessment', '£850', '£1,150', 'Save £300', L + '4')], '/diagnosis-main-page/child-adolescent-adhd/', lvl='h4'),
         price_card('Child &amp; Adolescent Autism (ASD) Assessments', '/img/svc-autism.webp', [
             price_opt('Virtual ASD assessment', '£1,300', '£1,500', 'Save £200', L + '5'),
-            price_opt('Face-to-face ASD assessment', '£1,500', '£1,800', 'Save £300', L + '6')], 'https://refocushub.co.uk/diagnosis-main-page/child-adolescent-autism-asd/', lvl='h4'),
+            price_opt('Face-to-face ASD assessment', '£1,500', '£1,800', 'Save £300', L + '6')], '/diagnosis-main-page/child-adolescent-autism-asd/', lvl='h4'),
         price_card('Combined ADHD + ASD Assessments', '/img/svc-complex.webp', [
             price_opt('Virtual ADHD + ASD assessment', '£1,700', '£1,900', 'Save £200', L + '8'),
-            price_opt('Face-to-face ADHD + ASD assessment', '£2,000', '£2,200', 'Save £200', L + '7')], 'https://refocushub.co.uk/diagnosis-main-page/combined-adhd-asd/', lvl='h4'),
+            price_opt('Face-to-face ADHD + ASD assessment', '£2,000', '£2,200', 'Save £200', L + '7')], '/diagnosis-main-page/combined-adhd-asd/', lvl='h4'),
         price_card('Child &amp; Adolescent Psychiatric Assessments', '/img/svc-camhs.webp', [
-            price_opt('Psychiatry assessment, virtual or face-to-face', '£370', '£500', 'Save £130', L + '9')], 'https://refocushub.co.uk/diagnosis-main-page/child-adolescent-psychiatric/', lvl='h4'),
+            price_opt('Psychiatry assessment, virtual or face-to-face', '£370', '£500', 'Save £130', L + '9')], '/diagnosis-main-page/child-adolescent-psychiatric/', lvl='h4'),
     ]
     adults = [
         price_card('Adult ADHD Assessments', '/img/who-adult.webp', [
             price_opt('Virtual ADHD assessment', '£750', '£850', 'Save £100', FREE_CALL),
-            price_opt('Face-to-face ADHD assessment', '£850', '£1,050', 'Save £200', FREE_CALL)], 'https://refocushub.co.uk/adult-adhd-assessment/', lvl='h4'),
+            price_opt('Face-to-face ADHD assessment', '£850', '£1,050', 'Save £200', FREE_CALL)], '/adult-adhd-assessment/', lvl='h4'),
         price_card('Adult Autism (ASD) Assessments', '/img/blog/autism-adults.webp', [
-            price_opt('Virtual ASD assessment', '£1,300', '£1,500', 'Save £200', 'https://refocushub.co.uk/adult-autism-assessment/', 'Enquire'),
-            price_opt('Face-to-face ASD assessment', '£1,500', '£1,800', 'Save £300', 'https://refocushub.co.uk/adult-autism-assessment/', 'Enquire')], 'https://refocushub.co.uk/adult-autism-assessment/', lvl='h4'),
+            price_opt('Virtual ASD assessment', '£1,300', '£1,500', 'Save £200', '/adult-autism-assessment/', 'Enquire'),
+            price_opt('Face-to-face ASD assessment', '£1,500', '£1,800', 'Save £300', '/adult-autism-assessment/', 'Enquire')], '/adult-autism-assessment/', lvl='h4'),
         price_card('Adult Combined ADHD + ASD Assessments', '/img/who-puzzle.webp', [
             price_opt('Virtual ADHD + ASD assessment', '£1,700', '£1,900', 'Save £200', '/contact/', 'Enquire'),
             price_opt('Face-to-face ADHD + ASD assessment', '£2,000', '£2,200', 'Save £200', '/contact/', 'Enquire')], lvl='h4'),
         price_card('Refocus Neuro-Hormone ADHD Pathway™', '/img/woman-light.webp', [
             price_opt('Virtual ADHD + mental health and perimenopause', '£750', '£900', 'Save £150', L + '1'),
-            price_opt('Face-to-face ADHD + mental health and perimenopause', '£850', '£1,000', 'Save £150', '/contact/', 'Enquire')], 'https://refocushub.co.uk/care-main-page/adhd-assessments-for-women-approaching-perimenopause/', lvl='h4'),
+            price_opt('Face-to-face ADHD + mental health and perimenopause', '£850', '£1,000', 'Save £150', '/contact/', 'Enquire')], '/care-main-page/adhd-assessments-for-women-approaching-perimenopause/', lvl='h4'),
     ]
     neuro = [
         price_card('Brain Mapping', '/img/qeeg-tablet.webp', [
@@ -780,8 +780,10 @@ def athome_page():
           '/img/hero-athome.webp', main)
 
 
-prices_page()
-contact_page()
-learning_page()
-blog_page()
-athome_page()
+
+if __name__ == '__main__':
+    prices_page()
+    contact_page()
+    learning_page()
+    blog_page()
+    athome_page()
