@@ -473,7 +473,7 @@ def adult_asd():
     sections = [
         intro(['At Refocus, our goal is not simply to identify autism, but to understand how your mind works, how you have adapted over a lifetime, and what support will genuinely help.',
                'Every assessment is Consultant-led and follows NICE guideline CG142 on autism diagnosis in adults, using the structured tools NICE recommends — the ADI-R developmental interview and the ADOS-2 observation.'],
-              '/img/blog/autism-adults.webp', 'Adults holding colourful jigsaw pieces', 'Adult autism', 'How your mind works, and how you have adapted', sat='/img/who-diagnosed.webp'),
+              '/img/adult-autism-intro.webp', 'A man reading in an armchair at home, headphones around his neck', 'Adult autism', 'How your mind works, and how you have adapted', sat='/img/who-diagnosed.webp'),
         sec('dx-signs', 'signs-title', 'Is it autism?', 'Is an autism assessment right for me?', 'Autism in adulthood rarely looks the way people expect. Some adults recognise themselves the moment they read about it. Others have spent decades appearing to cope, while privately managing:',
             chips(['Exhaustion after ordinary social contact', 'Sensory overload — noise, light, texture, crowds', 'A real need for routine, and genuine distress when it breaks', 'Unwritten social rules that others seem to absorb effortlessly', 'Deep, focused interests that have always felt central'], 'dx-chips dx-chips-lg') +
             '<p class="dx-note">Many adults — particularly women, and those given a diagnosis of anxiety or depression first — develop sophisticated masking strategies, and only seek an assessment after years of burnout or feeling persistently misunderstood.</p>'
