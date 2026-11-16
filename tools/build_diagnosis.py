@@ -212,7 +212,7 @@ def hub():
     ])
     adults = ''.join([
         svc('/img/who-adult.webp', 'ADHD Assessments', 'Consultant psychiatrist-led adult ADHD assessment using the structured DIVA-5 interview, with observer input and optional qEEG brain mapping.', [], '', '/adult-adhd-assessment/'),
-        svc('/img/blog/autism-adults.webp', 'ASD Assessments', 'Adult autism assessment using ADOS-2 and ADI-R, the tools NICE recommends, with a report you can use at work, study and with your GP.', [], '', '/adult-autism-assessment/'),
+        svc('/img/adult-autism.webp', 'ASD Assessments', 'Adult autism assessment using ADOS-2 and ADI-R, the tools NICE recommends, with a report you can use at work, study and with your GP.', [], '', '/adult-autism-assessment/'),
         svc('/img/woman-light.webp', 'Women’s ADHD &amp; Perimenopause', 'A holistic pathway for women at midlife, recognising that ADHD, hormones and mental health intersect.', [], '', '/care-main-page/adhd-assessments-for-women-approaching-perimenopause/'),
         svc('/img/who-diagnosed.webp', 'General Psychiatric', 'Consultant psychiatric assessment for adults with anxiety, low mood and complex mental health presentations.', [], '', '/contact/'),
     ])
