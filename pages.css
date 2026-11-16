@@ -738,3 +738,4 @@
 .nc-what .dx-collage .satellite { object-position: 80% center; }
 .dx-solo { max-width: 640px; margin: 28px 0 0; }
 .dx-solo .dx-price { position: static; }
+.dx-collage img[src*="performer"], .nc-stage img[src*="performer"] { object-position: 8% center; }
