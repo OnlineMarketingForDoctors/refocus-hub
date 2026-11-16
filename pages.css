@@ -95,6 +95,7 @@
 /* Keep faces in frame on the shallow card images */
 .pc-media img[src*="svc-medication"] { object-position: center 12%; }
 .pc-media img[src*="woman-window"] { object-position: center 24%; }
+.pc-media img[src*="adult-autism"] { object-position: center 18%; }
 .pc:hover .pc-media img { transform: scale(1.06); }
 .pc-media::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(0, 19, 49, 0.05) 20%, rgba(0, 19, 49, 0.88)); }
 .pc-media h3, .pc-media h4 { color: #fff; margin: 0; padding: 18px 72px 18px 22px; font-size: clamp(1.25rem, 1.8vw, 1.5rem); line-height: 1.15; }

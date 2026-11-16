@@ -149,7 +149,7 @@ def prices_page():
         price_card('Adult ADHD Assessments', '/img/who-adult.webp', [
             price_opt('Virtual ADHD assessment', '£750', '£850', 'Save £100', FREE_CALL),
             price_opt('Face-to-face ADHD assessment', '£850', '£1,050', 'Save £200', FREE_CALL)], '/adult-adhd-assessment/', lvl='h4'),
-        price_card('Adult Autism (ASD) Assessments', '/img/blog/autism-adults.webp', [
+        price_card('Adult Autism (ASD) Assessments', '/img/adult-autism.webp', [
             price_opt('Virtual ASD assessment', '£1,300', '£1,500', 'Save £200', '/adult-autism-assessment/', 'Enquire'),
             price_opt('Face-to-face ASD assessment', '£1,500', '£1,800', 'Save £300', '/adult-autism-assessment/', 'Enquire')], '/adult-autism-assessment/', lvl='h4'),
         price_card('Adult Combined ADHD + ASD Assessments', '/img/who-puzzle.webp', [
