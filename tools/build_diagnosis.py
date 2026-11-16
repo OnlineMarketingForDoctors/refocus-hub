@@ -64,6 +64,8 @@ def features(items, cols=3):
 
 
 def split(media, copy, reverse=False, cls=''):
+    if not media:
+        return f'<div class="dx-solo {cls}">{copy}</div>'
     r = ' is-reverse' if reverse else ''
     return f'<div class="dx-split{r} {cls}"><div class="dx-split-media">{media}</div><div class="dx-split-copy">{copy}</div></div>'
 
@@ -98,6 +100,7 @@ def steps(items, img=None):
 
 
 def booking(items, note=''):
+    return ''  # booking-process steps are hidden on every page; prices stay
     lis = ''.join(f'<li><span class="n">{k + 1}</span><div><h3>{t}</h3><p>{x}</p></div></li>' for k, (t, x) in enumerate(items))
     n = f'<p class="dx-book-note">{note}</p>' if note else ''
     return f'<ol class="dx-book">{lis}</ol>{n}'
@@ -234,11 +237,6 @@ def hub():
                             ('i-compass', 'Second-opinion level expertise', 'Our service is designed to offer clarity where families feel stuck, uncertain, or unheard.')], cols=1)), deco=wave('right')),
         sec('dx-kids', 'kids-title', 'Children &amp; young people', 'Assessments for children and young people', 'Available online and face-to-face for ages 7-18.', f'<div class="dx-svc-grid">{kids}</div>', sid='children'),
         sec('dx-adults', 'adults-title', 'Adult services', 'Assessments for adults', 'Consultant-led ADHD and autism assessments for adults, online or face-to-face in Manchester. Structured diagnostic evaluations that combine gold-standard clinical methods with neuroscience-informed insight.', f'<div class="dx-svc-grid dx-svc-compact">{adults}</div>', sid='adults', dark=True),
-        sec('dx-booking', 'booking-title', 'Simple, supportive booking', 'Simple, supportive booking.', 'We’ve designed our booking process to reduce stress and delays. This ensures safety, suitability, and the best clinical fit from the start.',
-            booking([('Complete screening', 'A short screening ensures we match you to the most appropriate service and clinician.'),
-                     ('Pay a deposit only', 'Get started with a simple deposit—no full payment upfront required.'),
-                     ('Secure portal access', 'Access our clinical portal (Medesk) for questionnaires and secure communication.'),
-                     ('Guided appointment', 'Our team guides you to the right appointment—online or face-to-face.')]), center=True),
         REVIEWS,
         faq(faqs, 'FAQ'),
         REGULATED,
@@ -456,7 +454,7 @@ def adult_adhd():
                    ('Step 3', 'After the assessment', '<p>You will receive a comprehensive, clear, and practical report including:</p>' + ul(['Diagnostic outcome (where criteria are met)', 'Differential diagnoses considered', 'Personalised recommendations for workplace or educational adjustments, psychological therapies or coaching, lifestyle and environmental strategies, and emotional wellbeing support', 'Medication guidance (if appropriate), including discussion around NHS shared-care pathways']) + '<p>We understand many adults wish to continue aspects of care through the NHS, and we will support you in understanding your options while being transparent about local GP variability regarding shared care.</p>')],
                   img='/img/consultation.webp')),
         sec('dx-how', 'how-title', 'Booking', 'Book a private Adult ADHD assessment', '',
-            '<div class="dx-promises"><p>At Refocus, assessments are:</p>' + chips(['Clinically robust', 'Neurodevelopmentally informed', 'Compassionate and personalised', 'Focused on the whole person']) + '</div><h3 class="dx-sub">How our booking system works</h3>' +
+            '<div class="dx-promises"><p>At Refocus, assessments are:</p>' + chips(['Clinically robust', 'Neurodevelopmentally informed', 'Compassionate and personalised', 'Focused on the whole person']) + '</div>' +
             split(booking(STD_BOOKING, 'This process allows us to prepare thoroughly and ensures every patient receives the right assessment, at the right time, with the right clinician.'),
                   price_box('Adult ADHD assessment', [('Virtual assessment', '£750', '£850'), ('Face-to-face assessment', '£850', '£1,050')]), cls='dx-how-split')),
         talk_band(),
@@ -510,7 +508,7 @@ def adult_asd():
                    ('Step 3', 'After the assessment', '<p>You will receive a comprehensive, clear and practical report including:</p>' + ul(['Diagnostic outcome (where criteria are met)', 'Differential diagnoses considered', 'A profile of your strengths, needs and sensory world', 'Personalised recommendations for workplace or educational adjustments, psychological support and coaching, sensory and environmental strategies, and emotional wellbeing and burnout recovery', 'Guidance on any coexisting conditions identified, and how to take them forward']) + '<p>Support after an autism diagnosis is about understanding, adjustments and any coexisting conditions — not about treating autism itself. Your report is written to be used: with employers, universities, your GP and wider support services.</p>')],
                   img='/img/clinic/consult-room.webp')),
         sec('dx-how', 'how-title', 'Booking', 'Enquire about a private adult autism assessment', '',
-            '<div class="dx-promises"><p>At Refocus, assessments are:</p>' + chips(['Clinically robust', 'Neurodevelopmentally informed', 'Compassionate and personalised', 'Focused on the whole person']) + '</div><h3 class="dx-sub">How our enquiry and booking process works</h3>' +
+            '<div class="dx-promises"><p>At Refocus, assessments are:</p>' + chips(['Clinically robust', 'Neurodevelopmentally informed', 'Compassionate and personalised', 'Focused on the whole person']) + '</div>' +
             split(booking([STD_BOOKING[0], STD_BOOKING[1], ('Complete online forms', 'Including your own and informant screening tools.'), STD_BOOKING[3], STD_BOOKING[4]], 'This process allows us to prepare thoroughly and ensures every patient receives the right assessment, at the right time, with the right clinician.'),
                   price_box('Adult autism assessment', [('Virtual assessment', '£1,500', None), ('Face-to-face assessment', '£1,800', None)], note='Ask about our current special offer prices on your free call.'), cls='dx-how-split')),
         talk_band(),
@@ -551,7 +549,7 @@ def women():
             split('<img class="dx-single reveal-img" src="/img/woman-light.webp" alt="A woman with her eyes closed in warm sunlight" loading="lazy">',
                   features([('i-doc', 'Diagnostic Outcome', 'Clear ADHD diagnosis where criteria are met, with differential diagnoses considered'), ('i-brain', 'Personalised Formulation', 'Explaining how hormones, brain function, and mental health interact in your case'),
                             ('i-path', 'Treatment Pathways', 'ADHD-specific strategies, menopause-focused interventions, or psychological support'), ('i-compass', 'Workplace Adjustments', 'Recommendations for reasonable adjustments in your work environment')], cols=1))),
-        sec('dx-how', 'how-title', 'Booking', 'How our booking system works', 'A simple, secure process to get you started on your assessment journey.',
+        sec('dx-how', 'how-title', 'Prices', 'Neuro-Hormone ADHD Pathway™ prices', '',
             split(booking([('Book online', 'Request a women’s ADHD assessment'), ('Pay deposit', '£250 deposit unlocks access to Medesk portal'), ('Complete questionnaires', 'Online screening and informant questionnaires'),
                            ('Assessment booked', 'With our Advanced Nurse Practitioner, with MDT oversight'), ('Final payment', 'Remaining balance paid before the appointment')]),
                   price_box('Neuro-Hormone ADHD Pathway™', [('Virtual: ADHD + mental health and perimenopause', '£750', '£900'), ('Face-to-face: ADHD + mental health and perimenopause', '£850', '£1,000')]), cls='dx-how-split')),
