@@ -113,7 +113,7 @@ def article(a):
 ''' + newsletter() + cta_band('Not sure where to start?', 'Start with a free 15-minute call', a['cta_text']) + '  </main>\n'
 
     slug = a['url'].strip('/')
-    build(slug, a['seo_title'], a['desc'], a['hero'], main, current='/neuro-blog/')
+    build(slug, a['seo_title'], a['desc'], a['hero'], main, current='/learning-page/')
     ld = {'@context': 'https://schema.org', '@type': 'BlogPosting', 'headline': re.sub('&amp;', '&', a['title']),
           'description': a['desc'], 'image': 'https://refocushub.co.uk' + a['hero'], 'datePublished': a['iso'], 'dateModified': a['mod_iso'],
           'author': {'@type': 'Organization', 'name': 'Refocus The Brain Hub'},

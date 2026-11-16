@@ -67,6 +67,25 @@
   nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
 
+  /* ---------- Menu dropdowns: button opens on tap/keyboard; hover opens on desktop ---------- */
+  var subs = Array.prototype.slice.call(document.querySelectorAll('.main-nav .has-sub'));
+  function closeSubs(except) {
+    subs.forEach(function (li) { if (li !== except) { li.classList.remove('is-open'); li.querySelector('.sub-toggle').setAttribute('aria-expanded', 'false'); } });
+  }
+  subs.forEach(function (li) {
+    var btn = li.querySelector('.sub-toggle');
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = !li.classList.contains('is-open');
+      closeSubs(li);
+      li.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', String(open));
+    });
+    li.addEventListener('mouseleave', function () { if (window.matchMedia('(min-width: 1021px)').matches) closeSubs(); });
+  });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.main-nav')) closeSubs(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSubs(); });
+
   /* ---------- EEG traces ---------- */
   function eegPath(width, height, points, seed, spikes) {
     var rnd = function () { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };

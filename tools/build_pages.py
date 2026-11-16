@@ -38,8 +38,13 @@ def build(slug, title, desc, hero_img, main, current=None):
     top = top.replace('</svg>\n\n  <!-- ===== Header', EXTRA_ICONS + '  </svg>\n\n  <!-- ===== Header', 1)
     top = top.replace('<a class="brand" href="#top" aria-label="Refocus The Brain Hub, back to top">', '<a class="brand" href="/" aria-label="Refocus The Brain Hub home">')
     top = top.replace('src="img/', 'src="/img/')
+    # Mark this page in the menu, and its section's top-level link
+    top = top.replace(f'<a href="/{slug}/">', f'<a href="/{slug}/" aria-current="page">')
     if current:
-        top = top.replace(f'<li><a href="{current}">', f'<li><a href="{current}" aria-current="page">')
+        if f'<li class="has-sub"><a href="{current}">' in top:
+            top = top.replace(f'<li class="has-sub"><a href="{current}">', f'<li class="has-sub"><a href="{current}" aria-current="page">', 1)
+        else:
+            top = top.replace(f'<li><a href="{current}">', f'<li><a href="{current}" aria-current="page">', 1)
 
     tail = HOME[HOME.index('  <!-- ===== Footer'):]
     tail = tail.replace('src="img/', 'src="/img/').replace('<script src="main.js" defer></script>', '<script src="/main.js" defer></script>\n  <script src="/pages.js" defer></script>')
