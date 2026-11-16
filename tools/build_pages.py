@@ -162,29 +162,29 @@ def prices_page():
     neuro = [
         price_card('Brain Mapping', '/img/qeeg-tablet.webp', [
             price_opt('qEEG brain mapping with clinical interpretation', '£350', None, None, L + '10')],
-            'https://refocushub.co.uk/neuroscience-main-page/qeeg-brain-mapping/',
+            '/neuroscience-main-page/qeeg-brain-mapping/',
             '''<div class="pc-offer"><span class="pc-offer-tag"><svg><use href="#i-gift"/></svg>Special offer</span>
               <p class="pc-offer-line">qEEG brain mapping, booked alongside any Refocus service <span><s>£350</s> <strong>£200</strong></span></p>
               <p class="pc-note">Also £200 if you go on to a recommended assessment or treatment plan following your brain mapping.</p>
               <a class="text-link" href="https://refocushub.co.uk/prices-and-booking/">Book qEEG <svg><use href="#i-right"/></svg></a></div>'''),
         price_card('Neuromodulation', '/img/svc-neuromod.webp', [
             price_opt('First session Exomind with medic appointment', '£350', None, None, L + '13'),
-            price_opt('6 session Exomind (first session will be deducted)', '£1,000', '£1,800', 'Save £800', L + '14')], 'https://refocushub.co.uk/neuroscience-main-page/exomind/'),
+            price_opt('6 session Exomind (first session will be deducted)', '£1,000', '£1,800', 'Save £800', L + '14')], '/neuroscience-main-page/exomind/'),
         price_card('Brain Training', '/img/blog/what-is-neurofeedback.webp', [
             price_opt('10 Neurofeedback sessions + qEEG brain mapping', '£950', None, None, L + '15'),
-            price_opt('20 Neurofeedback sessions + qEEG brain mapping', '£1,350', None, None, L + '16')], 'https://refocushub.co.uk/neuroscience-main-page/neurofeedback/'),
+            price_opt('20 Neurofeedback sessions + qEEG brain mapping', '£1,350', None, None, L + '16')], '/neuroscience-main-page/neurofeedback/'),
         price_card('Neuro-biological Support', '/img/home/helmet-fitting.webp', [
             price_opt('10 tPBM sessions with qEEG brain mapping', '£950', None, None, L + '11'),
-            price_opt('20 tPBM sessions with qEEG brain mapping', '£1,350', None, None, L + '12')], 'https://refocushub.co.uk/neuroscience-main-page/photobiomodulation/'),
+            price_opt('20 tPBM sessions with qEEG brain mapping', '£1,350', None, None, L + '12')], '/neuroscience-main-page/photobiomodulation/'),
     ]
     care = [
         price_card('Refocus Neuro-Hormone Clinic™', '/img/who-woman.webp', [
-            price_opt('Virtual assessment', '£300', None, None, L + '2')], 'https://refocushub.co.uk/neurohormone-clinic/'),
+            price_opt('Virtual assessment', '£300', None, None, L + '2')], '/neurohormone-clinic/'),
         price_card('At-Home Brain Therapy', '/img/home/helmet-home.webp', [
             price_opt('Refocus CORE 810 tPBM helmet, for personal home use', '£1,490', None, None, '/at-home-brain-therapy-2/', 'Learn more'),
             price_opt('Refocus DEEP 1070 tPBM helmet, for personal home use', '£1,690', None, None, '/at-home-brain-therapy-2/', 'Learn more')], '/at-home-brain-therapy-2/'),
-        price_card('ADHD Medication Treatment Pathway', '/img/svc-medication.webp', [price_opt('Medication assessment, titration and monitoring', None, href=None)], 'https://refocushub.co.uk/care-main-page/adhd-medication-treatment-pathway/'),
-        price_card('HRT Treatment Pathway', '/img/woman-window.webp', [price_opt('Hormone replacement therapy pathway', None, href=None)], 'https://refocushub.co.uk/care-main-page/hrt-treatment-pathway/'),
+        price_card('ADHD Medication Treatment Pathway', '/img/svc-medication.webp', [price_opt('Medication assessment, titration and monitoring', None, href=None)], '/care-main-page/adhd-medication-treatment-pathway/'),
+        price_card('HRT Treatment Pathway', '/img/woman-window.webp', [price_opt('Hormone replacement therapy pathway', None, href=None)], '/care-main-page/hrt-treatment-pathway/'),
     ]
     faqs = [
         ('What is included in an assessment price?', 'Your price covers the pre-assessment questionnaires, your appointment with a consultant-led team, and a comprehensive written report you can share with your GP, school or employer.'),
@@ -748,7 +748,7 @@ def athome_page():
         <div>
           <p class="kicker">Personalised pathways</p>
           <h2 id="path-title">Psychiatry, neuroscience, and modern neuromodulation — combined into more personalised brain health pathways.</h2>
-          <p>For individuals wanting a deeper understanding of how their brain is functioning, we also offer optional <a href="https://refocushub.co.uk/neuroscience-main-page/qeeg-brain-mapping/">qEEG brain mapping</a> to help identify patterns of overactivity, underactivity, cognitive overload, or inefficiencies across brain networks.</p>
+          <p>For individuals wanting a deeper understanding of how their brain is functioning, we also offer optional <a href="/neuroscience-main-page/qeeg-brain-mapping/">qEEG brain mapping</a> to help identify patterns of overactivity, underactivity, cognitive overload, or inefficiencies across brain networks.</p>
           <p>This allows brain support pathways to become more informed, targeted, and individualised — because better brain health should never be one-size-fits-all.</p>
           <p class="ah-motto"><span>Small changes at brain level.</span><span>Meaningful changes in everyday life.</span></p>
         </div>
