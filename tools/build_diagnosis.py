@@ -434,7 +434,7 @@ def adult_adhd():
                       ('i-doc', 'Pre-assessment Questionnaires', 'Evidence-based forms completed by you and an observer who knows you well, ideally one who knew you in childhood.'),
                       ('i-layers', 'Screening for co-occurring conditions', 'Anxiety, mood difficulties, autism traits, burnout and emotional dysregulation.')]), center=True, dark=True),
         sec('dx-tool-sec', 'tool-title', 'The gold standard', 'What is the DIVA-5?', '',
-            split('<img class="dx-single reveal-img" src="/img/dr-report.webp" alt="A consultant psychiatrist reviewing a written assessment report" loading="lazy">',
+            split('<img class="dx-single reveal-img" src="/img/clinic/consult-room.webp" alt="A calm consultation room at the Refocus clinic" loading="lazy">',
                   '<p class="lede">The DIVA-5 (Diagnostic Interview for ADHD in Adults) is a gold-standard, NICE-aligned structured diagnostic interview based on DSM-5 ADHD criteria.</p><p>It:</p>' +
                   ul(['Explores symptoms in both childhood and adulthood', 'Assesses how ADHD impacts work, relationships, daily functioning, and emotional wellbeing', 'Uses real-life examples rather than simple tick-box questions', 'Helps differentiate ADHD from other conditions that can present similarly']) +
                   '<p class="ab-pull">Using the DIVA-5 ensures the assessment is structured, clinically robust, and evidence-based, while still allowing space for your individual story and lived experience.</p>')),
