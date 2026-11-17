@@ -21,7 +21,6 @@ NHC = '/neurohormone-clinic/'
 MEDS = CARE + 'adhd-medication-treatment-pathway/'
 HRT = CARE + 'hrt-treatment-pathway/'
 WOMEN = CARE + 'adhd-assessments-for-women-approaching-perimenopause/'
-L = 'https://refocushub.co.uk/assessments/?id='
 
 
 def page(slug, title, desc, hero_img, hero_html, sections, current):

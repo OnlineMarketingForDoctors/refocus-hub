@@ -136,55 +136,54 @@ def price_card(title, img, opts, link=None, extra='', lvl='h3'):
 
 
 def prices_page():
-    L = 'https://refocushub.co.uk/assessments/?id='
     kids = [
         price_card('Child &amp; Adolescent ADHD Assessments', '/img/svc-adhd.webp', [
-            price_opt('Virtual ADHD assessment', '£750', '£890', 'Save £140', L + '3'),
-            price_opt('Face-to-face ADHD assessment', '£850', '£1,150', 'Save £300', L + '4')], '/diagnosis-main-page/child-adolescent-adhd/', lvl='h4'),
+            price_opt('Virtual ADHD assessment', '£750', '£890', 'Save £140', FREE_CALL),
+            price_opt('Face-to-face ADHD assessment', '£850', '£1,150', 'Save £300', FREE_CALL)], '/diagnosis-main-page/child-adolescent-adhd/', lvl='h4'),
         price_card('Child &amp; Adolescent Autism (ASD) Assessments', '/img/svc-autism.webp', [
-            price_opt('Virtual ASD assessment', '£1,300', '£1,500', 'Save £200', L + '5'),
-            price_opt('Face-to-face ASD assessment', '£1,500', '£1,800', 'Save £300', L + '6')], '/diagnosis-main-page/child-adolescent-autism-asd/', lvl='h4'),
+            price_opt('Virtual ASD assessment', '£1,300', '£1,500', 'Save £200', FREE_CALL),
+            price_opt('Face-to-face ASD assessment', '£1,500', '£1,800', 'Save £300', FREE_CALL)], '/diagnosis-main-page/child-adolescent-autism-asd/', lvl='h4'),
         price_card('Combined ADHD + ASD Assessments', '/img/svc-complex.webp', [
-            price_opt('Virtual ADHD + ASD assessment', '£1,700', '£1,900', 'Save £200', L + '8'),
-            price_opt('Face-to-face ADHD + ASD assessment', '£2,000', '£2,200', 'Save £200', L + '7')], '/diagnosis-main-page/combined-adhd-asd/', lvl='h4'),
+            price_opt('Virtual ADHD + ASD assessment', '£1,700', '£1,900', 'Save £200', FREE_CALL),
+            price_opt('Face-to-face ADHD + ASD assessment', '£2,000', '£2,200', 'Save £200', FREE_CALL)], '/diagnosis-main-page/combined-adhd-asd/', lvl='h4'),
         price_card('Child &amp; Adolescent Psychiatric Assessments', '/img/svc-camhs.webp', [
-            price_opt('Psychiatry assessment, virtual or face-to-face', '£370', '£500', 'Save £130', L + '9')], '/diagnosis-main-page/child-adolescent-psychiatric/', lvl='h4'),
+            price_opt('Psychiatry assessment, virtual or face-to-face', '£370', '£500', 'Save £130', FREE_CALL)], '/diagnosis-main-page/child-adolescent-psychiatric/', lvl='h4'),
     ]
     adults = [
         price_card('Adult ADHD Assessments', '/img/who-adult.webp', [
             price_opt('Virtual ADHD assessment', '£750', '£850', 'Save £100', FREE_CALL),
             price_opt('Face-to-face ADHD assessment', '£850', '£1,050', 'Save £200', FREE_CALL)], '/adult-adhd-assessment/', lvl='h4'),
         price_card('Adult Autism (ASD) Assessments', '/img/adult-autism.webp', [
-            price_opt('Virtual ASD assessment', '£1,300', '£1,500', 'Save £200', '/adult-autism-assessment/', 'Enquire'),
-            price_opt('Face-to-face ASD assessment', '£1,500', '£1,800', 'Save £300', '/adult-autism-assessment/', 'Enquire')], '/adult-autism-assessment/', lvl='h4'),
+            price_opt('Virtual ASD assessment', '£1,300', '£1,500', 'Save £200', FREE_CALL, 'Enquire'),
+            price_opt('Face-to-face ASD assessment', '£1,500', '£1,800', 'Save £300', FREE_CALL, 'Enquire')], '/adult-autism-assessment/', lvl='h4'),
         price_card('Adult Combined ADHD + ASD Assessments', '/img/who-puzzle.webp', [
-            price_opt('Virtual ADHD + ASD assessment', '£1,700', '£1,900', 'Save £200', '/contact/', 'Enquire'),
-            price_opt('Face-to-face ADHD + ASD assessment', '£2,000', '£2,200', 'Save £200', '/contact/', 'Enquire')], lvl='h4'),
+            price_opt('Virtual ADHD + ASD assessment', '£1,700', '£1,900', 'Save £200', FREE_CALL, 'Enquire'),
+            price_opt('Face-to-face ADHD + ASD assessment', '£2,000', '£2,200', 'Save £200', FREE_CALL, 'Enquire')], lvl='h4'),
         price_card('Refocus Neuro-Hormone ADHD Pathway™', '/img/woman-light.webp', [
-            price_opt('Virtual ADHD + mental health and perimenopause', '£750', '£900', 'Save £150', L + '1'),
-            price_opt('Face-to-face ADHD + mental health and perimenopause', '£850', '£1,000', 'Save £150', '/contact/', 'Enquire')], '/care-main-page/adhd-assessments-for-women-approaching-perimenopause/', lvl='h4'),
+            price_opt('Virtual ADHD + mental health and perimenopause', '£750', '£900', 'Save £150', FREE_CALL),
+            price_opt('Face-to-face ADHD + mental health and perimenopause', '£850', '£1,000', 'Save £150', FREE_CALL, 'Enquire')], '/care-main-page/adhd-assessments-for-women-approaching-perimenopause/', lvl='h4'),
     ]
     neuro = [
         price_card('Brain Mapping', '/img/qeeg-tablet.webp', [
-            price_opt('qEEG brain mapping with clinical interpretation', '£350', None, None, L + '10')],
+            price_opt('qEEG brain mapping with clinical interpretation', '£350', None, None, FREE_CALL)],
             '/neuroscience-main-page/qeeg-brain-mapping/',
             '''<div class="pc-offer"><span class="pc-offer-tag"><svg><use href="#i-gift"/></svg>Special offer</span>
               <p class="pc-offer-line">qEEG brain mapping, booked alongside any Refocus service <span><s>£350</s> <strong>£200</strong></span></p>
               <p class="pc-note">Also £200 if you go on to a recommended assessment or treatment plan following your brain mapping.</p>
-              <a class="text-link" href="https://refocushub.co.uk/prices-and-booking/">Book qEEG <svg><use href="#i-right"/></svg></a></div>'''),
+              <a class="text-link" href="/free-consultation/">Book qEEG <svg><use href="#i-right"/></svg></a></div>'''),
         price_card('Neuromodulation', '/img/svc-neuromod.webp', [
-            price_opt('First session Exomind with medic appointment', '£350', None, None, L + '13'),
-            price_opt('6 session Exomind (first session will be deducted)', '£1,000', '£1,800', 'Save £800', L + '14')], '/neuroscience-main-page/exomind/'),
+            price_opt('First session Exomind with medic appointment', '£350', None, None, FREE_CALL),
+            price_opt('6 session Exomind (first session will be deducted)', '£1,000', '£1,800', 'Save £800', FREE_CALL)], '/neuroscience-main-page/exomind/'),
         price_card('Brain Training', '/img/blog/what-is-neurofeedback.webp', [
-            price_opt('10 Neurofeedback sessions + qEEG brain mapping', '£950', None, None, L + '15'),
-            price_opt('20 Neurofeedback sessions + qEEG brain mapping', '£1,350', None, None, L + '16')], '/neuroscience-main-page/neurofeedback/'),
+            price_opt('10 Neurofeedback sessions + qEEG brain mapping', '£950', None, None, FREE_CALL),
+            price_opt('20 Neurofeedback sessions + qEEG brain mapping', '£1,350', None, None, FREE_CALL)], '/neuroscience-main-page/neurofeedback/'),
         price_card('Neuro-biological Support', '/img/home/helmet-fitting.webp', [
-            price_opt('10 tPBM sessions with qEEG brain mapping', '£950', None, None, L + '11'),
-            price_opt('20 tPBM sessions with qEEG brain mapping', '£1,350', None, None, L + '12')], '/neuroscience-main-page/photobiomodulation/'),
+            price_opt('10 tPBM sessions with qEEG brain mapping', '£950', None, None, FREE_CALL),
+            price_opt('20 tPBM sessions with qEEG brain mapping', '£1,350', None, None, FREE_CALL)], '/neuroscience-main-page/photobiomodulation/'),
     ]
     care = [
         price_card('Refocus Neuro-Hormone Clinic™', '/img/who-woman.webp', [
-            price_opt('Virtual assessment', '£300', None, None, L + '2')], '/neurohormone-clinic/'),
+            price_opt('Virtual assessment', '£300', None, None, FREE_CALL)], '/neurohormone-clinic/'),
         price_card('At-Home Brain Therapy', '/img/home/helmet-home.webp', [
             price_opt('Refocus CORE 810 tPBM helmet, for personal home use', '£1,490', None, None, '/at-home-brain-therapy-2/', 'Learn more'),
             price_opt('Refocus DEEP 1070 tPBM helmet, for personal home use', '£1,690', None, None, '/at-home-brain-therapy-2/', 'Learn more')], '/at-home-brain-therapy-2/'),
