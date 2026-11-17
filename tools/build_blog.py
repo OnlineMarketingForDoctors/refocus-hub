@@ -68,6 +68,19 @@ def share(url, title):
           </div>'''
 
 
+PROMO = '''<aside class="ar-promo on-dark" aria-labelledby="promo-title">
+            <img src="/img/qeeg-tablet.webp" alt="An iSyncWave qEEG headset beside a tablet showing colourful brain maps" loading="lazy">
+            <div class="ar-promo-body">
+              <p class="ar-k">qEEG brain mapping</p>
+              <p class="ar-promo-t" id="promo-title">See how your brain is working, not just how you feel</p>
+              <p>A painless scan of your brain’s electrical activity, explained by our clinicians.</p>
+              <p class="ar-promo-price"><strong>£200</strong> <span>alongside any Refocus service <s>£350</s></span></p>
+              <a class="btn btn-primary" href="/free-consultation/">Book a free call</a>
+              <a class="ar-promo-link" href="/neuroscience-main-page/qeeg-brain-mapping/">How brain mapping works <svg><use href="#i-right"/></svg></a>
+            </div>
+          </aside>'''
+
+
 def article(a):
     body, toc = render(a['blocks'])
     words = len(re.sub(r'<[^>]+>', ' ', body).split())
@@ -92,7 +105,7 @@ def article(a):
             <summary id="toc-title">In this article</summary>
             <ol>{toc_html}</ol>
           </details>
-          {share(a['url'], a['title'])}
+          {PROMO}
         </aside>
         <article class="ar-body">
           {body}
