@@ -28,9 +28,15 @@ MENU = [
   ]),
 ]
 
+# Sections kept in MENU but not shown in the menu for now. Remove a label to show it again.
+HIDDEN = {'Brain care'}
+
+
 def nav(indent='      '):
     lis = []
     for label, href, groups in MENU:
+        if label in HIDDEN:
+            continue
         if not groups:
             lis.append(f'<li><a href="{href}">{label}</a></li>')
             continue
