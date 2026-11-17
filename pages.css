@@ -849,3 +849,16 @@
 @media (max-width: 400px) { .fc-who { grid-template-columns: 1fr; } }
 .fc-next .dx-steps-media img { object-position: 70% center; }
 @media (max-width: 560px) { .ah-buy .btn { margin-left: 0; width: 100%; justify-content: center; } }
+
+/* ---------- Site map (sm-) ---------- */
+.sm-grid { columns: 3 320px; column-gap: 24px; }
+.sm-group { break-inside: avoid; margin: 0 0 24px; padding: 26px; border-radius: var(--r-lg); background: #fff; box-shadow: var(--shadow-soft); }
+.sm-group h2 { display: flex; align-items: center; gap: 14px; margin: 0 0 14px; font-size: 1.6rem; color: var(--navy); }
+.sm-group .ico { width: 42px; height: 42px; border-radius: 12px; }
+.sm-group .ico svg { width: 22px; height: 22px; }
+.sm-group ul { list-style: none; margin: 0; padding: 0; }
+.sm-group li + li { border-top: 1px solid rgba(0, 19, 49, 0.07); }
+.sm-group a { display: block; padding: 11px 10px; margin: 0 -10px; border-radius: 12px; text-decoration: none; transition: background-color 0.2s; }
+.sm-group a:hover { background: var(--turquoise-wash); }
+.sm-group a span { display: block; font-weight: 700; color: var(--navy); line-height: 1.35; }
+.sm-group a small { display: block; margin-top: 2px; font-size: 0.8rem; color: var(--ink-soft); overflow-wrap: anywhere; }
