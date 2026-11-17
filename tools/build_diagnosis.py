@@ -16,15 +16,16 @@ PRICES = '/prices/'
 REVIEWS = re.search(r'    <!-- ===== Reviews ===== -->\n.*?</section>\n', HOME, re.S).group(0).replace('src="img/', 'src="/img/')
 REGULATED = re.search(r'    <!-- ===== Regulated ===== -->\n.*?</section>\n', HOME, re.S).group(0).replace('src="img/', 'src="/img/')
 
-TEAM = {
-    'vrajitoriu': ('Dr Miriana Vrajitoriu', 'Consultant Child &amp; Adolescent Psychiatrist | Founder &amp; Medical Director', 'GMC Specialist Register | MRCPsych | ADOS-2 | ADI-R'),
-    'qadir': ('Dr Arif Qadir', 'Consultant Child &amp; Adolescent Psychiatrist | Safeguarding Lead', 'ADI-R | DISCO-3 | Maudsley Adult ADHD Training'),
-    'corciova': ('Dr Suzana Alexandra Corciova', 'Consultant Child &amp; Adolescent Psychiatrist', 'GMC Registered | MRCPsych | CCT | ADI-R | UKAAN'),
-    'walsh': ('Dr Helen Walsh', 'Consultant Clinical Psychologist | Clinical Lead', 'ADOS Trained'),
+TEAM = {  # roles and credentials from the clinic's staff document
+    'vrajitoriu': ('Dr Miriana Vrajitoriu', 'Consultant Child &amp; Adolescent Psychiatrist | Founder &amp; Medical Director | Neuroscience &amp; Safeguarding Lead', 'GMC Specialist Register | MRCPsych | ADOS-2 | ADI-R'),
+    'mcguinness': ('Claire McGuinness', 'Advanced Nurse Practitioner | ADHD Medication Pathway &amp; Operational Lead', 'NMC Registered | Independent Prescriber | 30+ years NHS'),
+    'walsh': ('Dr Helen Walsh', 'Consultant Clinical Psychologist | Clinical Lead for Neurodevelopmental Services', 'HCPC Registered | ADOS Trained'),
+    'qadir': ('Dr Arif Qadir', 'Consultant Child &amp; Adolescent Psychiatrist | Medical Clinical Lead', 'GMC Specialist Register | MRCPsych | ADI-R | DISCO-3'),
     'hafeez': ('Dr Muhammad Adnan Hafeez', 'Consultant Psychiatrist | Adult ADHD &amp; Neuropsychiatry', 'GMC Registered'),
     'ashar': ('Dr Syeda Sabeen Ashar', 'Consultant Psychiatrist | Liaison Psychiatry &amp; Adult ADHD', 'GMC Specialist Register | MRCPsych | CCT | Section 12 Approved'),
-    'williams': ('Sarah Williams', 'Advanced Clinical Practitioner | Women’s Neurodevelopmental Health Lead', 'RMN | V300 Non-Medical Prescriber | MSc Advanced Clinical Practice'),
-    'mcguinness': ('Claire McGuinness', 'Advanced Nurse Practitioner | ADHD Medication Pathway Lead', 'NMC Registered | Independent Prescriber | MSc | First Class Honours'),
+    'corciova': ('Dr Suzana Alexandra Corciova', 'Consultant Child &amp; Adolescent Psychiatrist', 'GMC Registered | MRCPsych | CCT | ADI-R | UKAAN Trained'),
+    'williams': ('Sarah Williams', 'Advanced Clinical Practitioner | Women’s Neurodevelopmental Health Lead', 'NMC | MSc Advanced Clinical Practice | ADHD Prescriber &amp; Assessor'),
+    'aali': ('Ariana Aali', 'Clinical Neuroscience &amp; Research Associate', 'MRes Human Cognitive Neuroscience (Distinction) | EEG &amp; qEEG'),
 }
 
 
@@ -108,7 +109,8 @@ def booking(items, note=''):
 
 def team(keys, intro=''):
     cards = ''.join(f'''<li class="dx-person"><img src="/img/team-{k}.webp" alt="{TEAM[k][0]}" loading="lazy"><div><h3>{TEAM[k][0]}</h3><p class="role">{TEAM[k][1]}</p><p class="creds">{TEAM[k][2]}</p><a class="text-link" href="/about-us/#team">Read full profile<span class="sr-only"> of {TEAM[k][0]}</span> <svg><use href="#i-right"/></svg></a></div></li>''' for k in keys)
-    return f'<ul class="dx-team dx-team-{min(len(keys), 3)}">{cards}</ul>'
+    cols = 2 if len(keys) == 4 else min(len(keys), 3)
+    return f'<ul class="dx-team dx-team-{cols}">{cards}</ul>'
 
 
 def price_box(title, rows, note='Special offer prices apply to bookings made by 30 November 2026.'):
@@ -268,7 +270,7 @@ def child_adhd():
             contrast('They may be labelled as:', ['“Naughty”, “lazy”, “not trying hard enough”', '“Bright but not reaching potential”', '“Too emotional” or “too sensitive”'],
                      'Over time, repeated criticism can deeply impact:', ['Self-esteem and confidence', 'Emotional wellbeing', 'School engagement and peer relationships'],
                      'An early, thoughtful diagnosis helps adults respond differently, reduce blame, and support your child in ways that genuinely work for their brain.'), deco=wave('left')),
-        sec('dx-team-sec', 'team-title', 'Meet the specialists', 'Our team specialists in children &amp; young people', '', team(['vrajitoriu', 'qadir', 'corciova'])),
+        sec('dx-team-sec', 'team-title', 'Meet the specialists', 'Our team specialists in children &amp; young people', '', team(['vrajitoriu', 'qadir', 'corciova', 'walsh'])),
         sec('dx-approach', 'approach-title', 'Our approach', 'Our approach at Refocus: beyond questionnaires', 'ADHD is a neurodevelopmental condition, so our assessments combine gold-standard clinical methods with advanced neuroscience tools when clinically appropriate.',
             features([('i-shield', 'Consultant Psychiatrist', 'Assessment by an experienced Consultant Child and Adolescent Psychiatrist with robust experience in neurodevelopmental assessments'),
                       ('i-book', 'Developmental History', 'Full developmental and psychosocial history with parents/carers'),
@@ -315,7 +317,7 @@ def child_asd():
         sec('dx-matters', 'matters-title', 'Why it matters', 'Why timely and accurate diagnosis matters', '',
             contrast('Without understanding why a child struggles, they may be:', ['Mislabelled as ‘difficult’, ‘anxious’, or ‘oppositional’', 'Pushed to cope in environments that overwhelm them', 'Left without appropriate school adjustments or support'],
                      'A clear diagnosis can:', ['Reduce self-blame and shame', 'Improve understanding at home and school', 'Open access to tailored educational and therapeutic support', 'Help young people develop a positive sense of identity']), deco=wave('left')),
-        sec('dx-team-sec', 'team-title', 'Meet the specialist', 'Our team specialist', '', team(['vrajitoriu', 'walsh'])),
+        sec('dx-team-sec', 'team-title', 'Meet the specialists', 'Our autism assessment specialists', '', team(['vrajitoriu', 'walsh', 'corciova'])),
         sec('dx-approach', 'approach-title', 'Our approach', 'Our autism assessment approach at Refocus', 'ASD assessment requires depth, structure, and clinical expertise. We follow NICE-compliant pathways and use gold-standard diagnostic tools, alongside comprehensive information from families and schools. Every Refocus ASD assessment includes:',
             features([('i-shield', 'Expert-Led Assessment', 'Assessment led by highly experienced clinicians, including consultant child &amp; adolescent psychiatrists'),
                       ('i-book', 'ADI-R Interview', 'A detailed developmental history appointment with parents/carers using ADI-R'),
@@ -347,7 +349,7 @@ def combined():
         sec('dx-signs', 'signs-title', 'Is it right for my child?', 'Is a combined neurodevelopmental assessment right for my child?', 'A combined assessment may be helpful if your child:',
             ul(['Shows attention, impulsivity, or emotional-regulation difficulties and social-communication or sensory differences', 'Has mixed or conflicting questionnaire results', 'Has previously been assessed for one condition but concerns remain', 'Masks difficulties at school but struggles significantly at home', 'Has anxiety, learning differences, or emotional challenges alongside neurodevelopmental traits'], 'dx-cards-list') +
             statement('ADHD and autism can look different across ages and genders, particularly in girls and cognitively able young people. A single, integrated pathway helps us understand how traits interact and what support will genuinely help.')),
-        sec('dx-team-sec', 'team-title', 'Meet the specialists', 'Our team specialists in children &amp; young people', '', team(['vrajitoriu', 'qadir', 'corciova'])),
+        sec('dx-team-sec', 'team-title', 'Meet the specialists', 'Our team specialists in children &amp; young people', '', team(['vrajitoriu', 'walsh', 'corciova'])),
         sec('dx-matters', 'matters-title', 'Why it matters', 'Why timely and accurate diagnosis matters', '',
             contrast('Without a combined approach, children may:', ['Receive an incomplete diagnosis', 'Be offered support that only partially fits their needs', 'Continue to struggle despite “doing all the right things”'],
                      'A combined assessment allows us to:', ['Consider overlap, interaction, and differences between ADHD and ASD', 'Reduce repeated assessments and delays', 'Provide clear, practical recommendations for home, school, and wellbeing']), deco=wave('left')),
@@ -390,7 +392,7 @@ def psychiatric():
         sec('dx-matters', 'matters-title', 'Why it matters', 'Why a comprehensive psychiatric assessment matters', '',
             contrast('Without a full understanding of a child’s developmental and emotional history:', ['Symptoms may be treated in isolation rather than in context', 'Underlying neurodevelopmental differences may be missed', 'Interventions may be less effective or poorly tolerated'],
                      'Our assessments focus on:', ['Mapping symptoms across development', 'Identifying triggers, protective factors, and patterns over time', 'Recommendations that are individualised, realistic, and clinically meaningful']), deco=wave('left')),
-        sec('dx-team-sec', 'team-title', 'Meet the specialists', 'Our consultant child &amp; adolescent psychiatrists', '', team(['vrajitoriu', 'qadir', 'corciova'])),
+        sec('dx-team-sec', 'team-title', 'Meet the specialists', 'Our consultant child &amp; adolescent psychiatrists', '', team(['vrajitoriu', 'qadir'])),
         sec('dx-approach', 'approach-title', 'Our approach', 'Our Refocus psychiatric assessment approach', 'All our generic psychiatric assessments:',
             features([('i-shield', 'NICE &amp; NHS standards', 'Follow NICE guidance and recognised NHS standards'), ('i-person', 'Consultant-led', 'Are conducted by consultant child &amp; adolescent psychiatrists'),
                       ('i-doc', 'Evidence-based screening', 'Use structured, evidence-based screening tools'), ('i-people', 'Team review', 'Are discussed within a clinical team where appropriate')], cols=4) +
@@ -427,6 +429,7 @@ def adult_adhd():
             contrast('Over time, this can impact:', ['Confidence and self-esteem', 'Relationships and family life', 'Work performance and career progression', 'Physical and mental burnout', 'Emotional wellbeing and resilience'],
                      'A thoughtful, evidence-based diagnosis can:', ['Reduce shame', 'Increase self-understanding', 'Open the door to more effective support strategies'],
                      'For many people, understanding ADHD is not about “finding a label.” It is about finally understanding why life has felt harder than it should have.'), deco=wave('left')),
+        sec('dx-team-sec', 'team-title', 'Meet the specialists', 'Our adult ADHD consultant psychiatrists', 'Adult ADHD assessments are led by consultant psychiatrists with extensive experience in adult neurodevelopmental conditions.', team(['hafeez', 'ashar'])),
         sec('dx-approach', 'approach-title', 'Our approach', 'Our approach at Refocus: beyond questionnaires', 'ADHD is a complex neurodevelopmental condition, which is why meaningful assessment requires more than screening forms alone. At Refocus, we combine gold-standard clinical assessment methods with a holistic understanding of the brain, mental health, and lived experience.',
             features([('i-shield', 'Consultant Psychiatrist', 'Assessment by an experienced Consultant Psychiatrist with extensive experience in adult neurodevelopmental disorders'),
                       ('i-book', 'Full History', 'Developmental, psychosocial, educational, and mental-health history.'),
@@ -481,6 +484,7 @@ def adult_asd():
             contrast('Over time, that can affect:', ['Confidence and self-esteem', 'Relationships and family life', 'Work, study and career progression', 'Autistic burnout and exhaustion', 'Emotional wellbeing and resilience'],
                      'A careful, evidence-based assessment can:', ['Reduce shame', 'Deepen self-understanding', 'Open the door to adjustments and support that actually fit'],
                      'For many people, an autism assessment is not about “getting a label.” It is about finally understanding why life has taken so much more effort than it seemed to for everyone else.'), deco=wave('left')),
+        sec('dx-team-sec', 'team-title', 'Meet the specialists', 'Our adult autism assessment team', 'Adult autism assessments are led by our Consultant Clinical Psychologist, with consultant psychiatrist input in the multidisciplinary review.', team(['walsh', 'hafeez', 'ashar'])),
         sec('dx-approach', 'approach-title', 'Our approach', 'Our approach at Refocus: beyond questionnaires', 'Autism is a lifelong difference in how the brain processes social information, sensory input and change, which is why a meaningful assessment needs far more than a screening questionnaire. At Refocus, we combine the structured tools NICE recommends with a holistic understanding of the brain, mental health and lived experience.',
             features([('i-shield', 'Consultant Psychiatrist', 'Assessment led by an experienced Consultant Psychiatrist trained in ADOS-2 and ADI-R, the tools NICE recommends for diagnosing autism.'),
                       ('i-book', 'Developmental History', 'Developmental, educational, psychosocial and mental-health history, explored in depth.'),

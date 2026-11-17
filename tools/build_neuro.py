@@ -75,6 +75,10 @@ def pathways_band():
     return f'<ul class="nc-paths">{lis}</ul>'
 
 
+def staff(keys, h2, lede=''):
+    return sec('dx-team-sec', 'team-title', 'Meet the team', h2, lede, team(keys), center=True)
+
+
 NEURO_TALK = ('Not sure which route is right for you?', 'Start with a conversation. We’ll listen to your goals, explain honestly what each technique can and can’t do, and tell you whether brain mapping would add value first.')
 QEEG_REDUCED = 'qEEG brain mapping costs £200 instead of £350 when booked alongside any Refocus service.'
 
@@ -140,6 +144,7 @@ def neuro_hub():
       </div>
     </section>
 ''',
+        staff(['vrajitoriu', 'aali'], 'The people behind our neuroscience services', 'Our neuroscience service is led by our Medical Director, with brain mapping and neuromodulation therapies delivered alongside our Clinical Neuroscience &amp; Research Associate.'),
         REVIEWS,
         faq(faqs, 'FAQ'),
         REGULATED,
@@ -193,6 +198,7 @@ def qeeg():
                ['Acute mental health distress (such as severe agitation or psychosis)', 'A recent head injury or concussion', 'Scalp conditions or infections that prevent sensor placement'],
                ['At Refocus, every qEEG assessment is completed within a clinically governed framework and interpreted by experienced clinicians. qEEG is often used as a gateway into our neuroscience programmes, helping to guide personalised neurofeedback, photobiomodulation, or Exomind pathways, and to support deeper understanding in complex diagnostic assessments.'],
                '/img/hero-qeeg.webp', 'A clinician explains colourful brain maps to a patient'),
+        staff(['vrajitoriu', 'aali'], 'Your qEEG brain mapping team'),
         REVIEWS,
         talk_band(*NEURO_TALK),
     ]
@@ -253,6 +259,7 @@ def exomind():
                ['Have a history of epilepsy or seizures', 'Are pregnant or breastfeeding', 'Have metal implants near the head or implanted electronic devices (such as pacemakers)', 'Have experienced psychotic episodes or have certain severe mental health conditions', 'Are under 16 years of age'],
                ['At Refocus, safety always comes first. Every EXOMIND programme is delivered within a medically governed framework, with access to consultant psychiatrists and neuroscience-informed care pathways.'],
                '/img/clinic/tms-room.webp', 'The Refocus treatment room with the Exomind chair'),
+        staff(['vrajitoriu'], 'Who leads your EXOMIND programme'),
         REVIEWS,
         talk_band(*NEURO_TALK),
     ]
@@ -309,6 +316,7 @@ def neurofeedback():
                ['A history of seizures', 'Complex trauma', 'Severe mental health conditions'],
                ['At Refocus, neurofeedback is always delivered within a clinically governed framework, ensuring safety, adaptability, and evidence-informed care.'],
                '/img/clinic/lounge-brain.webp', 'A calm lounge at the Refocus clinic'),
+        staff(['aali', 'vrajitoriu'], 'Your neurofeedback team'),
         REVIEWS,
         talk_band(*NEURO_TALK),
     ]
@@ -355,6 +363,7 @@ def tpbm():
                ['At Refocus, all patients complete a short safety screening before booking tPBM. Where additional considerations are identified, a clinician will review the information to ensure the therapy is safe and appropriately tailored.',
                 'tPBM at Refocus is delivered within a clinically governed neuroscience framework, with protocols adjusted carefully and conservatively to prioritise safety, comfort, and individual brain needs.'],
                '/img/hero-neuro.webp', 'A woman relaxes wearing an iSyncWave headset'),
+        staff(['aali', 'vrajitoriu'], 'Your photobiomodulation team'),
         REVIEWS,
         talk_band(*NEURO_TALK),
     ]
@@ -543,7 +552,7 @@ def meds():
                       ('i-book', 'Clear documentation', 'Clear records you and your GP can rely on.'),
                       ('i-gift', 'Transparent pricing', 'A transparent pricing and review structure.')], cols=4) +
             '<p class="dx-note">Shared care agreements depend on local GP policies, and we will guide you through this process.</p>', center=True, dark=True),
-        sec('dx-team-sec', 'team-title', 'Meet the lead', 'Led by our ADHD Medication Pathway Lead', '', team(['mcguinness', 'vrajitoriu'])),
+        sec('dx-team-sec', 'team-title', 'Meet the lead', 'Led by our ADHD medication prescribers', '', team(['mcguinness', 'williams'])),
         sec('nc-first', 'first-title', 'Not diagnosed yet?', 'Start with an assessment', 'Medication is only ever considered after a thorough, consultant-led diagnosis.',
             cards([card('/img/who-adult.webp', 'Adult ADHD assessment', '', 'Consultant psychiatrist-led adult ADHD assessment using the structured DIVA-5 interview, with observer input and optional qEEG brain mapping.', [], '/adult-adhd-assessment/'),
                    card('/img/svc-adhd.webp', 'Child &amp; adolescent ADHD', '', 'A neuroscience-informed, child-centred ADHD assessment led by consultant child and adolescent psychiatrists.', [], '/diagnosis-main-page/child-adolescent-adhd/'),
@@ -574,7 +583,7 @@ def hrt():
             chips(['ADHD medication optimisation', 'HRT discussion and prescribing (pending CQC registration)', 'Lifestyle and sleep regulation strategies', 'Cognitive and brain-health recommendations'], 'dx-chips dx-chips-lg') +
             statement('Our focus is safety, clarity and evidence-informed decision-making, not trend-driven treatment.') +
             f'<div class="btn-row nc-center"><a class="btn btn-primary btn-lg" href="{NHC}">Visit the NeuroHormone Clinic</a><a class="text-link" href="{WOMEN}">ADHD and perimenopause <svg><use href="#i-right"/></svg></a></div>', center=True, dark=True),
-        sec('dx-team-sec', 'team-title', 'Meet the lead', 'Led by our Women’s NeuroHormone Service Lead', '', team(['williams', 'vrajitoriu'])),
+        sec('dx-team-sec', 'team-title', 'Meet the lead', 'Led by our Women’s NeuroHormone Service Lead', '', team(['williams'])),
         faq([CARE_FAQS[1], CARE_FAQS[0]], 'FAQ'),
         talk_band(),
     ]
