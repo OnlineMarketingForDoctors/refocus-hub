@@ -619,8 +619,8 @@ def athome_page():
               <div class="ah-best"><strong>Best for:</strong> {best}</div>
               <div class="ah-buy">
                 <div class="ah-price"><strong>{price}</strong><span>One-time purchase</span></div>
-                <a class="btn btn-primary" href="{cart}"><svg><use href="#i-cart"/></svg>Buy now</a>
-                <a class="text-link" href="tel:01614707093">Speak with our team <svg><use href="#i-right"/></svg></a>
+                <a class="btn btn-primary" href="tel:+441614707093" aria-label="Call 0161 470 7093 to order the {name}"><svg><use href="#i-phone"/></svg>Call to order</a>
+                <a class="text-link" href="/free-consultation/">Speak with our team <svg><use href="#i-right"/></svg></a>
               </div>
             </div>
           </article>'''
