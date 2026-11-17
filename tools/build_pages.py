@@ -237,7 +237,7 @@ def prices_page():
       <div class="wrap">
         <div class="split-head">
           <div><p class="kicker">Refocus Diagnosis</p><h2 id="diag-title">Assessment prices</h2></div>
-          <p class="lede">Consultant-led neurodevelopmental and psychiatric assessments for children, adolescents and adults — delivered virtually or face-to-face, with qEEG brain mapping available alongside.</p>
+          <p class="lede">Consultant-led neurodevelopmental and psychiatric assessments for children, adolescents and adults, delivered virtually or face-to-face, with qEEG brain mapping available alongside.</p>
         </div>
         <div class="pr-tabs" role="tablist" aria-label="Who is the assessment for?">
           <button class="pr-tab" role="tab" id="tab-kids" aria-controls="panel-kids" aria-selected="true">Children &amp; Adolescents</button>
@@ -270,7 +270,7 @@ def prices_page():
       <div class="wrap">
         <div class="split-head">
           <div><p class="kicker">Refocus Neuroscience</p><h2 id="neuro-title">Brain mapping and neuromodulation prices</h2></div>
-          <p class="lede">Advanced brain mapping and non-invasive neuromodulation therapies — TMS, neurofeedback and tPBM, guided by clinical qEEG interpretation.</p>
+          <p class="lede">Advanced brain mapping and non-invasive neuromodulation therapies, TMS, neurofeedback and tPBM, guided by clinical qEEG interpretation.</p>
         </div>
         <div class="pc-grid">
 {''.join(neuro)}        </div>
@@ -458,7 +458,7 @@ def learning_page():
     main = '  <main id="main">\n' + hero(
         '/img/hero-learning.webp', 'A woman reading in a navy armchair by a tall window, surrounded by books',
         'The Brain Learning Hub', 'Learn &amp; grow together',
-        'Discover trusted, clinician-led insights on ADHD, autism, neurodiversity, and brain health at Refocus – The Brain Hub.',
+        'Discover trusted, clinician-led insights on ADHD, autism, neurodiversity, and brain health at Refocus - The Brain Hub.',
         [('Explore resources', '#resources', 'btn-primary'), ('Read the latest articles', '#latest', 'btn-ghost')], pos='80% center') + f'''
     <!-- ===== Intro ===== -->
     <section class="section ln-intro" id="start" aria-labelledby="intro-title">
@@ -547,7 +547,7 @@ def blog_page():
     main = '  <main id="main">\n' + hero(
         '/img/hero-blog.webp', 'A writing desk by a window at dawn with a laptop, notebook and coffee',
         'Neuro blog', 'Brain Learning Hub',
-        'Rewire. Reflect. Refocus – Learning made for the way your brain actually works.',
+        'Rewire. Reflect. Refocus - Learning made for the way your brain actually works.',
         [('Read the latest', '#start', 'btn-primary'), ('Book a free 15-minute call', FREE_CALL, 'btn-ghost')], pos='78% center') + f'''
     <!-- ===== Featured ===== -->
     <section class="section bl-featured-sec" id="start" aria-labelledby="feat-title">
@@ -627,12 +627,12 @@ def athome_page():
     core = product('core', 'Refocus CORE 810', '810', 'Essential brain energy support', '£1,490', 'https://refocushub.co.uk/cart/?add-to-cart=6431', [
         'Refocus CORE is our foundational at-home PBM system designed to support everyday brain optimisation, mental clarity, focus, and cognitive resilience.',
         'Using one of the most researched wavelengths in photobiomodulation, CORE is designed to support mitochondrial function, blood flow, and healthy brain energy production.',
-        'Particularly suited for individuals experiencing stress, burnout, low mental energy, poor focus, sleep difficulties, or cognitive fatigue — and for those wanting to proactively support long-term brain wellness.'],
+        'Particularly suited for individuals experiencing stress, burnout, low mental energy, poor focus, sleep difficulties, or cognitive fatigue, and for those wanting to proactively support long-term brain wellness.'],
         'Early cognitive decline, stress, sleep support, mood regulation', 'is-core')
     deep = product('deep', 'Refocus DEEP 1070', '1070', 'Advanced deep brain neuromodulation', '£1,690', 'https://refocushub.co.uk/cart/?add-to-cart=6432', [
         'Refocus DEEP is our most advanced at-home PBM system, designed to provide deeper near-infrared penetration and more targeted neurological support.',
         'Using 1070nm technology, DEEP is designed to reach deeper brain structures involved in memory, cognition, processing speed, and neuroplasticity.',
-        'May be particularly relevant for individuals concerned about cognitive decline, neurological recovery, healthy brain ageing, or more persistent cognitive difficulties — including emerging research on MCI, Alzheimer’s, and neurodegenerative pathways.'],
+        'May be particularly relevant for individuals concerned about cognitive decline, neurological recovery, healthy brain ageing, or more persistent cognitive difficulties, including emerging research on MCI, Alzheimer’s, and neurodegenerative pathways.'],
         'Alzheimer’s, moderate to severe cognitive decline, stroke, Parkinson’s, dementia', 'is-deep')
     rows = [('Best suited for', 'Brain fog, stress, focus, burnout, sleep, everyday optimisation', 'Cognitive decline concerns, MCI, memory support, advanced optimisation'),
             ('Primary focus', 'Brain energy and daily cognitive function', 'Deeper cognitive and neurological support'),
@@ -642,7 +642,7 @@ def athome_page():
     main = '  <main id="main">\n' + hero(
         '/img/hero-athome.webp', 'A woman relaxing on her sofa at home wearing a Refocus near-infrared photobiomodulation helmet',
         'At-home brain therapy', '<span>Clinical-grade brain care.</span> <span>At home.</span>',
-        'Non-invasive Photobiomodulation (PBM) technology designed to support brain energy, blood flow, and cellular function— helping you or your loved ones think clearer, feel better, and live more fully.',
+        'Non-invasive Photobiomodulation (PBM) technology designed to support brain energy, blood flow, and cellular function, helping you or your loved ones think clearer, feel better, and live more fully.',
         [('Compare CORE and DEEP', '#collection', 'btn-primary'), ('Book your free consultation', FREE_CALL, 'btn-ghost')], pos='82% center') + f'''
     <!-- ===== Benefits ===== -->
     <section class="section ah-benefits" id="start" aria-labelledby="ben-title">
@@ -675,9 +675,9 @@ def athome_page():
     <section class="ah-belief on-dark" aria-labelledby="belief-title">
       <img src="/img/home/helmet-clinic.webp" alt="" width="1300" height="1137" loading="lazy" data-parallax>
       <div class="wrap ah-belief-inner">
-        <h2 id="belief-title">Brain health should move beyond symptom-management — and become more proactive, personalised, and neuroscience-informed.</h2>
+        <h2 id="belief-title">Brain health should move beyond symptom-management, and become more proactive, personalised, and neuroscience-informed.</h2>
         <div class="ah-belief-cols">
-          <p>Our at-home photobiomodulation pathways bring clinically informed brain support into everyday life through non-invasive near-infrared light therapy — designed to support brain energy, cognitive performance, and long-term brain wellness.</p>
+          <p>Our at-home photobiomodulation pathways bring clinically informed brain support into everyday life through non-invasive near-infrared light therapy, designed to support brain energy, cognitive performance, and long-term brain wellness.</p>
           <p>Whether you are struggling with burnout, brain fog, poor focus, cognitive fatigue, or simply looking to better support your brain as you age, PBM offers a modern, drug-free approach to brain optimisation and neurological wellbeing.</p>
         </div>
       </div>
@@ -691,7 +691,7 @@ def athome_page():
           <p class="kicker">The science</p>
           <h2 id="sci-title">Backed by emerging neuroscience.</h2>
           <p class="lede">Photobiomodulation is an evolving area of neuroscience research, with thousands of published studies exploring how near-infrared light may support cellular energy production, neuroplasticity, blood flow, and cognitive function.</p>
-          <p>PBM works primarily through the mitochondria — the energy-producing structures inside cells — helping improve the production of ATP, the fuel the brain relies on to function efficiently.</p>
+          <p>PBM works primarily through the mitochondria, the energy-producing structures inside cells, helping improve the production of ATP, the fuel the brain relies on to function efficiently.</p>
           <p>Research is also exploring the potential role of PBM in supporting cerebral oxygenation, reducing oxidative stress and inflammation, improving neuronal resilience, and supporting the brain’s natural recovery and waste-clearance systems.</p>
           <p class="ab-pull">Better brain energy may support better brain function.</p>
           <h3 class="ah-studies">Studies have explored potential benefits in:</h3>
@@ -709,14 +709,14 @@ def athome_page():
         <div class="section-head center">
           <p class="kicker">The collection</p>
           <h2 id="col-title">Introducing the Refocus PBM Collection.</h2>
-          <p class="lede">Two clinically informed at-home pathways. Choose the one that fits where you are — and where you want your brain to be.</p>
+          <p class="lede">Two clinically informed at-home pathways. Choose the one that fits where you are, and where you want your brain to be.</p>
         </div>
         <div class="ah-prods">{core}{deep}</div>
         <ul class="ah-specs">
           <li><svg><use href="#i-flask"/></svg><div><strong>Evidence-informed technology</strong>Built on emerging neuroscience and clinical research.</div></li>
           <li><svg><use href="#i-shield"/></svg><div><strong>Safe &amp; non-invasive</strong>No drugs. No side effects. Well tolerated.</div></li>
           <li><svg><use href="#i-home"/></svg><div><strong>Use at home</strong>Comfortable, easy-to-use and convenient.</div></li>
-          <li><svg><use href="#i-clock"/></svg><div><strong>20–30 min sessions</strong>3–5 times per week recommended.</div></li>
+          <li><svg><use href="#i-clock"/></svg><div><strong>20-30 min sessions</strong>3-5 times per week recommended.</div></li>
           <li><svg><use href="#i-people"/></svg><div><strong>Clinical support</strong>Guidance from our expert clinical team.</div></li>
         </ul>
       </div>
@@ -751,9 +751,9 @@ def athome_page():
         </div>
         <div>
           <p class="kicker">Personalised pathways</p>
-          <h2 id="path-title">Psychiatry, neuroscience, and modern neuromodulation — combined into more personalised brain health pathways.</h2>
+          <h2 id="path-title">Psychiatry, neuroscience, and modern neuromodulation, combined into more personalised brain health pathways.</h2>
           <p>For individuals wanting a deeper understanding of how their brain is functioning, we also offer optional <a href="/neuroscience-main-page/qeeg-brain-mapping/">qEEG brain mapping</a> to help identify patterns of overactivity, underactivity, cognitive overload, or inefficiencies across brain networks.</p>
-          <p>This allows brain support pathways to become more informed, targeted, and individualised — because better brain health should never be one-size-fits-all.</p>
+          <p>This allows brain support pathways to become more informed, targeted, and individualised, because better brain health should never be one-size-fits-all.</p>
           <p class="ah-motto"><span>Small changes at brain level.</span><span>Meaningful changes in everyday life.</span></p>
         </div>
       </div>

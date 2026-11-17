@@ -86,23 +86,23 @@ def neuro_hub():
          '<p>At Refocus Neuroscience, safety and clinical integrity are central to everything we do.</p><p>We offer evidence-informed neuromodulation approaches including:</p>' + ul(['qEEG Brain Mapping', 'Exomind TMS', 'Neurofeedback', 'Transcranial Photobiomodulation (tPBM)']) +
          '<p>All treatments are delivered within a medically governed environment, with clinical screening completed prior to starting any programme.</p><p>Non-invasive neuromodulation techniques such as TMS, neurofeedback and photobiomodulation have strong safety profiles when delivered appropriately. Most people experience minimal side effects, which may include mild scalp discomfort, transient headache or temporary fatigue depending on the modality used.</p><p>Before starting, we assess:</p>' +
          ul(['Medical and psychiatric history', 'Medication use', 'Neurological considerations', 'Suitability for stimulation-based therapies']) +
-         '<p>If a treatment is not appropriate, we will advise accordingly. Not everyone needs neuromodulation — and not everyone is suitable for every modality.</p><p>Our approach is measured, ethical and personalised.</p>'),
+         '<p>If a treatment is not appropriate, we will advise accordingly. Not everyone needs neuromodulation, and not everyone is suitable for every modality.</p><p>Our approach is measured, ethical and personalised.</p>'),
         ('2. Do I need a qEEG brain map before starting treatment?',
-         '<p>Not always — but in many cases, it is highly beneficial.</p><p>qEEG brain mapping provides objective data about brainwave patterns, connectivity and functional regulation. It allows us to understand how your brain is operating before intervention.</p><p>Some individuals choose qEEG:</p>' +
+         '<p>Not always, but in many cases, it is highly beneficial.</p><p>qEEG brain mapping provides objective data about brainwave patterns, connectivity and functional regulation. It allows us to understand how your brain is operating before intervention.</p><p>Some individuals choose qEEG:</p>' +
          ul(['To guide neurofeedback protocols', 'To personalise stimulation targets', 'To better understand symptoms such as brain fog, attention difficulty or emotional dysregulation', 'To track progress over time']) +
-         '<p>However, certain treatments — such as standard Exomind TMS protocols — can be delivered based on established clinical targeting without qEEG.</p><p>We will advise you on whether qEEG adds meaningful value in your specific situation. Our aim is precision, not unnecessary investigation.</p>'),
+         '<p>However, certain treatments, such as standard Exomind TMS protocols, can be delivered based on established clinical targeting without qEEG.</p><p>We will advise you on whether qEEG adds meaningful value in your specific situation. Our aim is precision, not unnecessary investigation.</p>'),
         ('3. Can treatments be combined, and how do they fit alongside psychiatric care?',
-         '<p>Yes — and this is where Refocus is different.</p><p>We are structured as a Brain Hub, meaning neuroscience services sit alongside psychiatric diagnostics and ongoing care.</p><p>Depending on your goals, treatments may be:</p>' +
+         '<p>Yes, and this is where Refocus is different.</p><p>We are structured as a Brain Hub, meaning neuroscience services sit alongside psychiatric diagnostics and ongoing care.</p><p>Depending on your goals, treatments may be:</p>' +
          ul(['Used independently', 'Integrated with ADHD medication', 'Combined sequentially (for example qEEG-guided neurofeedback with Exomind TMS)', 'Used as part of a wider wellbeing or cognitive optimisation plan']) +
          '<p>We carefully consider:</p>' + ul(['Clinical indication', 'Treatment timing', 'Neuroplasticity principles', 'Your personal capacity and schedule']) +
-         '<p>Neuromodulation is not a replacement for psychiatric care where medication or therapy is indicated — nor is medication always the only solution.</p><p>Our role is to integrate both worlds responsibly.</p><p>You will always receive a clear plan outlining:</p>' +
+         '<p>Neuromodulation is not a replacement for psychiatric care where medication or therapy is indicated, nor is medication always the only solution.</p><p>Our role is to integrate both worlds responsibly.</p><p>You will always receive a clear plan outlining:</p>' +
          ul(['Recommended modality', 'Expected duration', 'Monitoring approach', 'Outcome tracking']) +
-         '<p>The goal is measurable improvement — in mood, cognition, focus or emotional regulation — not simply completing sessions.</p>'),
+         '<p>The goal is measurable improvement, in mood, cognition, focus or emotional regulation, not simply completing sessions.</p>'),
     ]
     mods = cards([
-        card('/img/svc-neuromod.webp', 'Exomind TMS', 'Network-level change', 'Best when we want to influence specific circuits linked to mood, drive, regulation, and cognitive control. It’s often used when someone feels stuck—like the brain can’t shift gears even when they’re doing ‘all the right things’.', ['Wellbeing', 'Mood', 'Focus', 'Control', 'Performance'], EXO),
-        card('/img/nf-session.webp', 'Neurofeedback', 'Self-regulation training', 'Neurofeedback is like a gym for the nervous system. The brain receives feedback and gradually learns to spend more time in steadier, more efficient states—supporting regulation of attention, arousal, sleep and emotional reactivity.', ['Focus', 'Regulation', 'Resilience', 'Balance', 'Sleep'], NF),
-        card('/img/hero-tpbm.webp', 'Photobiomodulation', 'Cellular support + recovery', 'Photobiomodulation uses specific wavelengths of light to support cellular energy processes—often positioned around recovery, resilience, and supporting brain function under strain.', ['Energy', 'Clarity', 'Repair', 'Longevity', 'Brain health'], PBM),
+        card('/img/svc-neuromod.webp', 'Exomind TMS', 'Network-level change', 'Best when we want to influence specific circuits linked to mood, drive, regulation, and cognitive control. It’s often used when someone feels stuck, like the brain can’t shift gears even when they’re doing ‘all the right things’.', ['Wellbeing', 'Mood', 'Focus', 'Control', 'Performance'], EXO),
+        card('/img/nf-session.webp', 'Neurofeedback', 'Self-regulation training', 'Neurofeedback is like a gym for the nervous system. The brain receives feedback and gradually learns to spend more time in steadier, more efficient states, supporting regulation of attention, arousal, sleep and emotional reactivity.', ['Focus', 'Regulation', 'Resilience', 'Balance', 'Sleep'], NF),
+        card('/img/hero-tpbm.webp', 'Photobiomodulation', 'Cellular support + recovery', 'Photobiomodulation uses specific wavelengths of light to support cellular energy processes, often positioned around recovery, resilience, and supporting brain function under strain.', ['Energy', 'Clarity', 'Repair', 'Longevity', 'Brain health'], PBM),
     ])
     sections = [
         f'''    <section class="dx-belief nc-belief" id="start" aria-label="Our principle">
@@ -117,11 +117,11 @@ def neuro_hub():
                             ('i-leaf', 'Unused pathways fade', 'Underused networks gradually weaken and fade'),
                             ('i-flask', 'Cellular-level changes', 'Changes in brain signalling, neurotransmitters and how brain cells communicate')], cols=1)) +
             '<div class="nc-influence"><p>In everyday life, neuroplasticity is influenced by things like</p>' + chips(['Stress', 'Sleep', 'Emotions', 'Learning', 'Attention', 'Exercise', 'New experiences'], 'dx-chips dx-chips-lg') + '</div>' +
-            statement('Refocus exists to help people use neuroplasticity on purpose—especially when life has pushed the brain into patterns that no longer serve them.'), deco=wave('right')),
+            statement('Refocus exists to help people use neuroplasticity on purpose, especially when life has pushed the brain into patterns that no longer serve them.'), deco=wave('right')),
         sec('nc-why', 'why-title', 'Why Refocus is different', 'Why Refocus combines qEEG brain mapping with neuromodulation', 'Many services start with symptoms. <strong>We start with brain-based insight.</strong>',
             '<div class="nc-two">'
-            f'<article class="nc-stage"><span class="nc-stage-k">Step 1</span><img src="/img/qeeg-tablet.webp" alt="An iSyncWave qEEG headset beside a tablet showing colourful brain maps" loading="lazy"><div><h3>qEEG brain mapping</h3><p>qEEG helps us understand how your brain is functioning right now—your baseline patterns, strengths, and areas under strain. It can help us make your plan more precise.</p><p>For example, clarifying whether the brain looks more like it’s:</p>{ul(["Stuck in over-arousal / threat mode", "Running on low energy / low activation", "Struggling with attention regulation", "Showing signs of cognitive fatigue / overload"])}<p class="nc-result"><strong>Result:</strong> a clearer picture to guide the “what next” choice.</p><a class="text-link" href="{QEEG}">About qEEG brain mapping <svg><use href="#i-right"/></svg></a></div></article>'
-            f'<article class="nc-stage"><span class="nc-stage-k">Step 2</span><img src="/img/svc-neuromod.webp" alt="A patient relaxes during an Exomind session with a clinician at the console" loading="lazy"><div><h3>Neuromodulation</h3><p>Neuromodulation is how we deliver targeted input to help the brain practise healthier patterns—supporting neuroplasticity in a structured way.</p><p>At Refocus, we chose three complementary techniques because they work at different “levels” of the system:</p><ul class="check-list"><li><strong>Exomind TMS</strong> – targeted stimulation of specific brain networks</li><li><strong>Neurofeedback</strong> – training the brain to self-regulate</li><li><strong>Photobiomodulation</strong> – supporting brain energy &amp; recovery</li></ul></div></article>'
+            f'<article class="nc-stage"><span class="nc-stage-k">Step 1</span><img src="/img/qeeg-tablet.webp" alt="An iSyncWave qEEG headset beside a tablet showing colourful brain maps" loading="lazy"><div><h3>qEEG brain mapping</h3><p>qEEG helps us understand how your brain is functioning right now, your baseline patterns, strengths, and areas under strain. It can help us make your plan more precise.</p><p>For example, clarifying whether the brain looks more like it’s:</p>{ul(["Stuck in over-arousal / threat mode", "Running on low energy / low activation", "Struggling with attention regulation", "Showing signs of cognitive fatigue / overload"])}<p class="nc-result"><strong>Result:</strong> a clearer picture to guide the “what next” choice.</p><a class="text-link" href="{QEEG}">About qEEG brain mapping <svg><use href="#i-right"/></svg></a></div></article>'
+            f'<article class="nc-stage"><span class="nc-stage-k">Step 2</span><img src="/img/svc-neuromod.webp" alt="A patient relaxes during an Exomind session with a clinician at the console" loading="lazy"><div><h3>Neuromodulation</h3><p>Neuromodulation is how we deliver targeted input to help the brain practise healthier patterns, supporting neuroplasticity in a structured way.</p><p>At Refocus, we chose three complementary techniques because they work at different “levels” of the system:</p><ul class="check-list"><li><strong>Exomind TMS</strong> - targeted stimulation of specific brain networks</li><li><strong>Neurofeedback</strong> - training the brain to self-regulate</li><li><strong>Photobiomodulation</strong> - supporting brain energy &amp; recovery</li></ul></div></article>'
             '</div>', center=True, dark=True),
         sec('nc-mods', 'mods-title', 'Because “one size fits none” in neuroscience', 'Why we chose three techniques', 'Each technique works at a different level of the system, so your plan can match what your brain actually needs.', mods, deco=wave('left')),
         sec('nc-decide', 'decide-title', 'Your personalised plan', 'How we decide what you need', 'A step-by-step approach to understanding your brain and creating your personalised plan.',
@@ -174,9 +174,9 @@ def qeeg():
         sec('nc-who-sec', 'who-title', 'Who it’s for', 'Who is iSyncWave™ for?', '', who_html, center=True, deco=wave('left')),
         sec('nc-explain', 'explain-title', 'Explained simply', 'iSyncWave™ brain mapping explained simply', '',
             split('<img class="dx-single reveal-img" src="/img/framework-map.webp" alt="A clinician fits an iSyncWave headset on a patient" loading="lazy">',
-                  '<h3>What is iSyncWave™?</h3><p class="lede">iSyncWave™ is a comfortable, non-invasive EEG brain scan that measures how your brain works — including attention, processing speed, and how different brain areas communicate.</p>' +
+                  '<h3>What is iSyncWave™?</h3><p class="lede">iSyncWave™ is a comfortable, non-invasive EEG brain scan that measures how your brain works, including attention, processing speed, and how different brain areas communicate.</p>' +
                   chips(['No needles', 'No radiation', 'No discomfort']) +
-                  '<h3>Why isn’t a questionnaire enough?</h3><p>Questionnaires rely on memory, self-awareness and how symptoms look on the outside. But many people — especially children, women, and neurodivergent individuals — mask or compensate.</p><p>iSyncWave™ allows us to:</p>' +
+                  '<h3>Why isn’t a questionnaire enough?</h3><p>Questionnaires rely on memory, self-awareness and how symptoms look on the outside. But many people, especially children, women, and neurodivergent individuals, mask or compensate.</p><p>iSyncWave™ allows us to:</p>' +
                   ul(['Look directly at brain activity', 'Understand why things feel hard', 'Explain strengths as well as challenges'], 'dx-tick-list'))),
         sec('nc-show', 'show-title', 'What it can show', 'What can it show?', '',
             tools([('In children', 'Development &amp; learning', ul(['Cognitive development compared to age expectations', 'Attention and learning patterns', 'Emotional regulation and processing load'])),
@@ -187,11 +187,11 @@ def qeeg():
                   '<p>These may include:</p>' + ul([f'<a href="{NF}">Neurofeedback</a>', f'<a href="{EXO}">Transcranial magnetic stimulation (TMS)</a>', f'<a href="{PBM}">Photobiomodulation (tPBM)</a>', 'Brain optimisation or recovery pathways', 'Education and practical strategies'], 'dx-tick-list') +
                   price_box('qEEG brain mapping', [('qEEG brain mapping with clinical interpretation', '£350', None), ('Booked alongside any Refocus service', '£200', '£350')], note='Also £200 if you go on to a recommended assessment or treatment plan following your brain mapping.'))),
         safety('safe', 'Is qEEG brain mapping safe?',
-               ['qEEG is considered very safe and is widely used in both clinical and research settings with children, young people, and adults. The sensors only record activity — nothing is sent into the brain.',
+               ['qEEG is considered very safe and is widely used in both clinical and research settings with children, young people, and adults. The sensors only record activity - nothing is sent into the brain.',
                 'Most people experience no side effects. Occasionally, some may notice mild and temporary effects such as tiredness, a mild headache, or brief scalp sensitivity from the sensors.'],
                'qEEG may be postponed or adapted if someone is experiencing:',
                ['Acute mental health distress (such as severe agitation or psychosis)', 'A recent head injury or concussion', 'Scalp conditions or infections that prevent sensor placement'],
-               ['At Refocus, every qEEG assessment is completed within a clinically governed framework and interpreted by experienced clinicians. qEEG is often used as a gateway into our neuroscience programmes, helping to guide personalised neurofeedback, photobiomodulation, or Exomind pathways — and to support deeper understanding in complex diagnostic assessments.'],
+               ['At Refocus, every qEEG assessment is completed within a clinically governed framework and interpreted by experienced clinicians. qEEG is often used as a gateway into our neuroscience programmes, helping to guide personalised neurofeedback, photobiomodulation, or Exomind pathways, and to support deeper understanding in complex diagnostic assessments.'],
                '/img/hero-qeeg.webp', 'A clinician explains colourful brain maps to a patient'),
         REVIEWS,
         talk_band(*NEURO_TALK),
@@ -201,7 +201,7 @@ def qeeg():
          '/img/hero-qeeg.webp',
          H('/img/hero-qeeg.webp', 'A clinician points to colourful qEEG brain maps on a monitor while a patient looks on', 'qEEG brain mapping with iSyncWave™',
            'See the brain. Understand the mind.',
-           'At Refocus The Brain Hub, we use iSyncWave™, a next-generation EEG brain-mapping system designed to go far beyond questionnaires and symptom checklists. This is neuroscience that helps us see how a brain is actually functioning—from high-performing neurotypical adults seeking sharper cognition, to children and adults with complex neurodivergent profiles where standard tools often fall short.',
+           'At Refocus The Brain Hub, we use iSyncWave™, a next-generation EEG brain-mapping system designed to go far beyond questionnaires and symptom checklists. This is neuroscience that helps us see how a brain is actually functioning, from high-performing neurotypical adults seeking sharper cognition, to children and adults with complex neurodivergent profiles where standard tools often fall short.',
            [('Learn more', '#start', 'btn-primary'), ('Book now', FREE_CALL, 'btn-ghost')]),
          sections, NEURO)
 
@@ -215,23 +215,23 @@ def exomind():
     benefit_html = '<div class="dx-inc-grid nc-who">' + ''.join(f'<article class="dx-inc"><span class="ico"><svg><use href="#{i}"/></svg></span><h3>{t}</h3>{ul(x)}</article>' for i, t, x in benefit) + '</div>'
     sections = [
         intro(['We use EXOMIND™, powered by BTL’s ExoTMS® technology, to support healthier brain activity linked to mood, cognition, and self-control.',
-               'Unlike one-size-fits-all TMS, our clinician-led programme is tailored using symptoms, history, and—when appropriate—brain mapping and broader medical context.'],
+               'Unlike one-size-fits-all TMS, our clinician-led programme is tailored using symptoms, history, and, when appropriate, brain mapping and broader medical context.'],
               '/img/svc-neuromod.webp', 'A man relaxes in the Exomind chair while a clinician uses the console', 'EXOMIND™ · BTL ExoTMS®', 'A programme designed for real life', sat='/img/clinic/exomind-room.webp'),
         sec('nc-what', 'what-title', 'The technology', 'What is EXOMIND™ (ExoTMS®)?', 'EXOMIND is a non-invasive transcranial magnetic stimulation (TMS) system that delivers magnetic pulses to stimulate nerve cells in specific brain regions.',
             features([('i-compass', 'Targeted stimulation', 'Magnetic pulses precisely target key brain networks linked to mood regulation, cognitive function and self-control.'),
-                      ('i-spark', 'Neuroplasticity support', 'The aim is to support neuroplasticity—helping brain networks “reset” and communicate more effectively over time.'),
+                      ('i-spark', 'Neuroplasticity support', 'The aim is to support neuroplasticity, helping brain networks “reset” and communicate more effectively over time.'),
                       ('i-shield', 'FDA-cleared', 'EXOMIND’s ExoTMS® technology is FDA-cleared for the treatment of depression in the context of its marketed indications.')]), center=True, dark=True),
         sec('nc-diff', 'diff-title', 'Why EXOMIND is different', 'Not just crisis intervention', 'Unlike traditional TMS pathways, we deliver a holistic, clinician-led programme tailored to your unique brain and life.',
             split('<img class="dx-single reveal-img" src="/img/hero-exomind.webp" alt="A woman relaxes during an Exomind session" loading="lazy">',
-                  features([('i-leaf', 'A mental wellness programme', 'EXOMIND has been developed with a broader wellbeing and performance lens, aiming to support mood, motivation, cognitive clarity and resilience—especially relevant for busy, high-demand lives.'),
-                            ('i-heart', 'Comfort-forward delivery', 'EXOMIND is designed to be comfortable and accessible, making it easier to complete a full course consistently—an important ingredient for meaningful change.'),
+                  features([('i-leaf', 'A mental wellness programme', 'EXOMIND has been developed with a broader wellbeing and performance lens, aiming to support mood, motivation, cognitive clarity and resilience, especially relevant for busy, high-demand lives.'),
+                            ('i-heart', 'Comfort-forward delivery', 'EXOMIND is designed to be comfortable and accessible, making it easier to complete a full course consistently, an important ingredient for meaningful change.'),
                             ('i-layers', 'Integrated diagnostics', 'At Refocus, EXOMIND can be part of a wider plan that may include qEEG brain mapping, psychological strategies, medication review, and lifestyle-aware care.')], cols=1)), deco=wave('right')),
         sec('nc-who-sec', 'who-title', 'Who may benefit', 'Who may benefit', 'EXOMIND may be suitable for adults looking for a non-invasive, medication-free (or medication-supportive) approach to improving brain network functioning.',
             benefit_html + '<p class="dx-note"><strong>Important:</strong> suitability depends on clinical screening and safety checks. We’ll assess your individual circumstances during consultation.</p>', center=True),
         sec('nc-research', 'res-title', 'Evidence', 'What the research says', '',
-            tools([('Mental wellness', 'An expanding evidence base', '<p>Repetitive Transcranial Magnetic Stimulation (rTMS) has an expanding evidence base beyond clinical disorders, with growing research exploring its role in mental wellness, cognitive performance, and stress resilience.</p><p>Studies suggest that targeted prefrontal stimulation may support improvements in cognitive function, mental clarity, emotional regulation, and fatigue—symptoms commonly reported in burnout, brain fog, perimenopause, and high cognitive load states.</p>'),
-                   ('Depression', 'Established and robust', '<p>rTMS has an established and robust evidence base in depression—particularly for individuals who have not responded adequately to antidepressant medication.</p><p>NICE guidelines support the use of rTMS for treatment-resistant depression when delivered using approved protocols and appropriate clinical governance, and rTMS is also FDA-approved for Major Depressive Disorder in adults.</p>'),
-                   ('Binge eating &amp; OCD', 'Emerging evidence', '<p>rTMS has emerging evidence in binge eating and obsessive–compulsive disorder (OCD), particularly through its effects on impulse control, cognitive flexibility, and fronto-striatal circuits.</p><p>Clinical studies suggest that targeted prefrontal stimulation may reduce binge frequency, food cravings, and the intensity of intrusive or repetitive thoughts, with generally good tolerability.</p>'),
+            tools([('Mental wellness', 'An expanding evidence base', '<p>Repetitive Transcranial Magnetic Stimulation (rTMS) has an expanding evidence base beyond clinical disorders, with growing research exploring its role in mental wellness, cognitive performance, and stress resilience.</p><p>Studies suggest that targeted prefrontal stimulation may support improvements in cognitive function, mental clarity, emotional regulation, and fatigue, symptoms commonly reported in burnout, brain fog, perimenopause, and high cognitive load states.</p>'),
+                   ('Depression', 'Established and robust', '<p>rTMS has an established and robust evidence base in depression, particularly for individuals who have not responded adequately to antidepressant medication.</p><p>NICE guidelines support the use of rTMS for treatment-resistant depression when delivered using approved protocols and appropriate clinical governance, and rTMS is also FDA-approved for Major Depressive Disorder in adults.</p>'),
+                   ('Binge eating &amp; OCD', 'Emerging evidence', '<p>rTMS has emerging evidence in binge eating and obsessive-compulsive disorder (OCD), particularly through its effects on impulse control, cognitive flexibility, and fronto-striatal circuits.</p><p>Clinical studies suggest that targeted prefrontal stimulation may reduce binge frequency, food cravings, and the intensity of intrusive or repetitive thoughts, with generally good tolerability.</p>'),
                    ('ADHD symptoms', 'Emerging evidence', '<p>rTMS has an emerging evidence base in ADHD, particularly in relation to attention regulation, executive functioning, and emotional control.</p><p>Research studies suggest that targeted prefrontal stimulation may support improvements in attention, impulsivity, and cognitive control, especially in individuals who experience persistent symptoms despite standard interventions.</p>')]), deco=wave('left')),
         sec('nc-gov', 'gov-title', 'Evidence, safety &amp; governance', 'Evidence, safety &amp; governance', 'As a CQC-ready service, we maintain the highest standards of clinical governance and patient safety.',
             features([('i-shield', 'NICE guidance', 'NICE has published guidance on rTMS for depression, noting no major safety concerns when used with appropriate governance.'),
@@ -261,7 +261,7 @@ def exomind():
          '/img/hero-exomind.webp',
          H('/img/hero-exomind.webp', 'A woman relaxes in the Exomind chair while a clinician sets up her session', 'Refocus Neuroscience',
            'EXOMIND™ ExoTMS at Refocus',
-           'A modern, non-invasive brain stimulation programme for depression, mental wellbeing, focus and resilience — designed for real life, not just crisis care.'),
+           'A modern, non-invasive brain stimulation programme for depression, mental wellbeing, focus and resilience, designed for real life, not just crisis care.'),
          sections, NEURO)
 
 
@@ -275,7 +275,7 @@ def neurofeedback():
             timeline([('Measure', 'We measure brain activity (EEG) using sensors on the scalp.'),
                       ('Analyse', 'The system analyses patterns in real time (hundreds of readings per second).'),
                       ('Feedback', 'You receive feedback (audio/visual changes) linked to what your brain is doing in that moment.'),
-                      ('Learn', 'Your brain learns through repetition—reinforcing helpful states and reducing “stuck” patterns, over time.')]) +
+                      ('Learn', 'Your brain learns through repetition, reinforcing helpful states and reducing “stuck” patterns, over time.')]) +
             statement('This is why neurofeedback is often described as training rather than “treatment”: we’re supporting the brain’s capacity to self-regulate, not forcing it to do anything.'), center=True, dark=True),
         sec('nc-nopt', 'nopt-title', 'Why NeurOptimal®', 'Why we use NeurOptimal® at Refocus', '',
             split('<img class="dx-single reveal-img" src="/img/hero-neurofeedback.webp" alt="A man relaxes with his eyes closed during a NeurOptimal session" loading="lazy">',
@@ -284,10 +284,10 @@ def neurofeedback():
                       ('i-leaf', 'Non-directive and gentle', 'The system does not push the brain toward specific targets or frequencies; instead, it mirrors your brain’s activity and supports its own adaptive processes.'),
                       ('i-brain', 'Whole-system focus', 'Because NeurOptimal® engages the brain as a whole, many people notice benefits across stress resilience, sleep, emotional balance, and focus.'),
                       ('i-doc', 'No diagnosis required', 'NeurOptimal® is a brain training tool, not a medical treatment, and does not diagnose or treat specific disorders.')], cols=4) +
-            statement('In practice, you sit comfortably, engage with subtle feedback cues (often sound or visual), and your brain does the work—with no conscious effort needed on your part.'), deco=wave('right')),
+            statement('In practice, you sit comfortably, engage with subtle feedback cues (often sound or visual), and your brain does the work, with no conscious effort needed on your part.'), deco=wave('right')),
         sec('nc-cbt', 'cbt-title', 'CBT and neurofeedback', 'CBT and neurofeedback: how they fit together', 'Cognitive Behavioural Therapy (CBT) is a structured psychological therapy that helps people identify patterns of thought and behaviour that contribute to distress and learn new, more adaptive ways of thinking and acting. It’s one of the most evidence-supported therapies for anxiety, mood and stress-related conditions.',
             tools([('Enhancing learning readiness', 'Calmer, more focused', '<p>Neurofeedback supports brain regulation and calm focus, which can make the cognitive work in CBT (e.g., restructuring thoughts, practising new behaviours) easier and more effective. Some research suggests that when the brain is less dysregulated, people may engage more consistently with therapeutic exercises.</p>'),
-                   ('Addressing physiological patterns', 'Mind and nervous system', '<p>While CBT tackles thought and behaviour patterns, neurofeedback directly engages the brain’s self-regulatory networks. Together they can offer a whole-person approach—addressing what you think and how your nervous system responds.</p>'),
+                   ('Addressing physiological patterns', 'Mind and nervous system', '<p>While CBT tackles thought and behaviour patterns, neurofeedback directly engages the brain’s self-regulatory networks. Together they can offer a whole-person approach, addressing what you think and how your nervous system responds.</p>'),
                    ('Adjunct outcomes', 'Better together', '<p>Studies have found that neurofeedback can be effective alongside CBT in reducing symptoms like anxiety and improving emotional regulation, supporting the idea that combining them can be more impactful than either alone for some clients.</p>')]) +
             statement('At Refocus, we integrate neurofeedback seamlessly with therapeutic work (including CBT, coaching, or other supports) so your brain and behaviour both have space to shift.'), center=True),
         sec('nc-help', 'help-title', 'What it can help with', 'What neurofeedback can help with', 'Neurofeedback is used by many people to support:',
@@ -295,7 +295,7 @@ def neurofeedback():
                   features([('i-compass', 'Focus and mental stamina', ''), ('i-heart', 'Emotional regulation and reactivity', ''), ('i-sun', 'Sleep quality and recovery', ''), ('i-shield', 'Stress resilience and coping', '')], cols=1) +
                   '<p>Because neurofeedback supports regulation, it can be relevant for people with neurodivergent profiles (e.g., ADHD/autistic traits), performance goals, or anyone aiming for steadier functioning.</p><p class="dx-note"><strong>Important note:</strong> outcomes vary by person. We do not guarantee cures or specific results.</p>', reverse=True), deco=wave('left')),
         sec('nc-path', 'path-title', 'Step by step', 'The Refocus neurofeedback pathway', '',
-            steps([('Step 1', 'Discovery + goals', '<p>We clarify your priorities—focus, stress, sleep, emotional recovery, performance.</p>'),
+            steps([('Step 1', 'Discovery + goals', '<p>We clarify your priorities - focus, stress, sleep, emotional recovery, performance.</p>'),
                    ('Step 2', 'Optional brain mapping (qEEG)', '<p>A qEEG helps tailor training where appropriate.</p>'),
                    ('Step 3', 'NeurOptimal® training sessions', '<p>Comfortable, relaxed sessions where sensors monitor brain activity and provide real-time feedback, with your brain leading the adaptation.</p>'),
                    ('Step 4', 'Progress reviews &amp; integration', '<p>We measure change in how you think, feel, and function, and integrate that insight with CBT or other supports.</p>')],
@@ -317,7 +317,7 @@ def neurofeedback():
          '/img/hero-neurofeedback.webp',
          H('/img/hero-neurofeedback.webp', 'A man relaxes in an armchair with earbuds and small sensors during a neurofeedback session', 'Neurofeedback at Refocus',
            'Train your brain. Support self-regulation. Build resilience.',
-           'Your brain is always generating electrical activity. Neurofeedback uses gentle, real-time feedback from that activity to help your brain practise regulation—the same way a mirror helps you adjust posture. At Refocus, neurofeedback sits inside our wider Brain Hub approach: measure → understand → train → integrate.',
+           'Your brain is always generating electrical activity. Neurofeedback uses gentle, real-time feedback from that activity to help your brain practise regulation, the same way a mirror helps you adjust posture. At Refocus, neurofeedback sits inside our wider Brain Hub approach: measure → understand → train → integrate.',
            [('Learn more', '#start', 'btn-primary'), ('Book now', FREE_CALL, 'btn-ghost')]),
          sections, NEURO)
 
@@ -325,7 +325,7 @@ def neurofeedback():
 # ================================================================ Photobiomodulation
 def tpbm():
     sections = [
-        intro(['Photobiomodulation (tPBM) uses specific wavelengths of red and near-infrared (NIR) light to support cellular energy production and recovery. In the brain, tPBM is being researched for its potential effects on mitochondrial function (ATP/energy), neuroinflammation pathways, and neurovascular coupling—the relationship between brain activity and blood flow.',
+        intro(['Photobiomodulation (tPBM) uses specific wavelengths of red and near-infrared (NIR) light to support cellular energy production and recovery. In the brain, tPBM is being researched for its potential effects on mitochondrial function (ATP/energy), neuroinflammation pathways, and neurovascular coupling, the relationship between brain activity and blood flow.',
                'At Refocus, we deliver tPBM using iSyncWave, a dry-EEG headset that integrates brain mapping with built-in NIR tPBM, allowing us to tailor sessions using objective brain data rather than “one-size-fits-all” settings.'],
               '/img/framework-map.webp', 'A clinician fits an iSyncWave headset on a patient', 'Photobiomodulation with iSyncWave', 'Brain energy, blood flow and neuroplasticity', sat='/img/qeeg-tablet.webp'),
         sec('nc-diff', 'diff-title', 'What makes it different', 'What makes iSyncWave tPBM different?', '',
@@ -341,7 +341,7 @@ def tpbm():
         sec('nc-prog', 'prog-title', 'Step by step', 'What a tPBM programme looks like at Refocus', '',
             steps([('Step 1', 'Baseline brain mapping', '<p>We start with a structured intake and a baseline measurement (qEEG / iSyncWave scan) to understand your brain pattern and goals.</p>'),
                    ('Step 2', 'Personalised tPBM plan', '<p>A tPBM plan tailored to your profile, with optional neurofeedback, CBT strategies, sleep optimisation, and clinician support.</p>'),
-                   ('Step 3', 'Sessions + tracking', '<p>Sessions are non-invasive, comfortable, quiet, and tracked over time to reveal trends—not just daily feelings.</p>'),
+                   ('Step 3', 'Sessions + tracking', '<p>Sessions are non-invasive, comfortable, quiet, and tracked over time to reveal trends, not just daily feelings.</p>'),
                    ('Step 4', 'Review &amp; next steps', '<p>We review progress to continue tPBM, integrate neurofeedback, or escalate to medical review or diagnostics.</p>')],
                   img='/img/hero-tpbm.webp')),
         sec('dx-how', 'how-title', 'Prices', 'tPBM programmes', '',
@@ -380,12 +380,12 @@ CARE_FAQS = [
      ul(['ADHD and female presentation', 'Perimenopause and menopause', 'Mood changes and emotional regulation', 'Brain fog and cognitive shifts', 'Sleep disruption and burnout']) +
      '<p>The assessment includes:</p>' + ul(['Detailed clinical and hormonal history', 'Review of previous treatments', 'Risk assessment and medical screening', 'Individualised formulation']) +
      '<p>Where appropriate, treatment options may include:</p>' + ul(['ADHD medication optimisation', 'HRT discussion and prescribing (pending CQC registration)', 'Lifestyle and sleep regulation strategies', 'Cognitive and brain-health recommendations']) +
-     '<p>HRT prescribing follows recognised UK clinical guidance and includes careful risk screening and monitoring.</p><p>Our focus is safety, clarity and evidence-informed decision-making — not trend-driven treatment.</p>'),
+     '<p>HRT prescribing follows recognised UK clinical guidance and includes careful risk screening and monitoring.</p><p>Our focus is safety, clarity and evidence-informed decision-making, not trend-driven treatment.</p>'),
     ('3. How will ADHD medication management work at Refocus Care?',
      '<p>For individuals diagnosed with ADHD, we offer a structured medication pathway (pending CQC approval).</p><p>This includes:</p>' +
      ul(['Medication discussion and informed consent', 'Careful initiation and titration', 'Regular monitoring appointments', 'Side-effect and response tracking', 'Communication with your GP regarding shared care where appropriate']) +
      '<p>We follow national prescribing standards and ensure:</p>' + ul(['Physical health screening prior to initiation', 'Ongoing safety monitoring', 'Clear documentation', 'Transparent pricing and review structure']) +
-     '<p>Shared care agreements depend on local GP policies, and we will guide you through this process.</p><p>Our aim is stability, safety and sustainable improvement — not rushed prescribing.</p>'),
+     '<p>Shared care agreements depend on local GP policies, and we will guide you through this process.</p><p>Our aim is stability, safety and sustainable improvement, not rushed prescribing.</p>'),
 ]
 
 
@@ -395,7 +395,7 @@ def soon_tag():
 
 def care_hub():
     svc = cards([
-        card('/img/woman-light.webp', 'Women’s Neuro-Hormone Assessments', '', 'Specialist assessments exploring how hormonal transitions — including early perimenopause and menopause — interact with brain function, emotional regulation, cognition, and ADHD traits. These assessments are particularly designed for women whose symptoms are complex, overlapping, or previously misunderstood.',
+        card('/img/woman-light.webp', 'Women’s Neuro-Hormone Assessments', '', 'Specialist assessments exploring how hormonal transitions, including early perimenopause and menopause, interact with brain function, emotional regulation, cognition, and ADHD traits. These assessments are particularly designed for women whose symptoms are complex, overlapping, or previously misunderstood.',
              ['Neurodivergence informed', 'Brain &amp; hormone aware', 'Mood, cognition, sleep considered', 'Menopause specialists'], NHC),
         card('/img/svc-medication.webp', 'Refocus Neurodevelopmental Medication Pathway', soon_tag(), 'Safe, structured ADHD prescribing across adolescence and adulthood, with collaborative, individualised medication decisions.',
              ['ADHD prescribing', 'Health screening', 'Regular review &amp; monitoring', 'Neuroscience service'], MEDS),
@@ -410,7 +410,7 @@ def care_hub():
         sec('nc-covers', 'covers-title', 'What Refocus Care covers', 'Structured clinical pathways, not one-off appointments', 'All services are clinician-led, evidence-based, and aligned with NICE guidance while remaining responsive to emerging neuroscience and real-world patient needs.', svc, deco=wave('right')),
         sec('nc-phil', 'phil-title', 'Our philosophy', 'Brains don’t exist in isolation', 'They exist within bodies, relationships, careers, and changing hormonal landscapes.',
             split(collage('/img/hero-care.webp', '/img/svc-medication.webp', 'A consultant and a patient smile during a relaxed conversation', 'A nurse practitioner talks with a patient'),
-                  '<p class="lede">That’s why Refocus does not separate psychiatry, neuroscience, and hormone health into silos.</p><p>We prioritise thoughtful medicine, shared decision-making, and care that adapts as lives evolve. We bring together psychiatry, advanced nursing practice, neuroscience, and hormone–brain expertise to deliver thoughtful, ethical, and long-term clinical care.</p>' +
+                  '<p class="lede">That’s why Refocus does not separate psychiatry, neuroscience, and hormone health into silos.</p><p>We prioritise thoughtful medicine, shared decision-making, and care that adapts as lives evolve. We bring together psychiatry, advanced nursing practice, neuroscience, and hormone-brain expertise to deliver thoughtful, ethical, and long-term clinical care.</p>' +
                   '<div class="nc-hub"><p>Refocus is designed as a connected hub</p><ol><li><a href="/diagnosis-main-page/">Diagnostics</a></li><li><a href="/care-main-page/">Care</a></li><li><a href="/neuroscience-main-page/">Neuroscience</a></li></ol></div>')),
         sec('nc-pillars', 'pillars-title', 'Our standards', 'Every Refocus Care pathway is:', '',
             features([('i-person', 'Clinician-led', 'Consultant psychiatrists and advanced nurse practitioners lead every pathway.'),
@@ -438,20 +438,20 @@ def neurohormone():
     who = ['Brain fog, memory lapses, poor concentration', 'Sleep disruption, fatigue, burnout', 'Noticing worsening ADHD traits or wondering if ADHD has been missed',
            'Feeling that symptoms are being dismissed as ‘just stress’ or ‘just hormones’', 'Emotional volatility, anxiety, low mood, irritability', 'Loss of confidence or sense of identity', 'Recognising lifelong autistic traits becoming harder to mask']
     sections = [
-        intro(['Perimenopause and menopause can impact mood, sleep, focus, and resilience — even in high-achieving women.',
-               'At Refocus NeuroHormone Clinic™, we specialise in mental health where hormones, brain function, and neurodiversity intersect. This is not a “one-size-fits-all” menopause service. We look deeply at how hormonal transition interacts with mental health, cognition, ADHD traits, autistic masking, and stress physiology — and we build a plan that makes sense for you.'],
+        intro(['Perimenopause and menopause can impact mood, sleep, focus, and resilience, even in high-achieving women.',
+               'At Refocus NeuroHormone Clinic™, we specialise in mental health where hormones, brain function, and neurodiversity intersect. This is not a “one-size-fits-all” menopause service. We look deeply at how hormonal transition interacts with mental health, cognition, ADHD traits, autistic masking, and stress physiology, and we build a plan that makes sense for you.'],
               '/img/who-woman.webp', 'A woman smiling as she relaxes on her sofa', 'Refocus NeuroHormone Clinic™', 'When hormones change, the brain changes too', sat='/img/woman-window.webp'),
         sec('nc-who-sec', 'who-title', 'Who it’s for', 'Who is this service for?', 'This clinic is designed for women who are in early perimenopause, perimenopause, or menopause and experiencing:',
             ul(who, 'dx-cards-list') + statement('You do not need a formal menopause diagnosis to be seen.'), deco=wave('right')),
         sec('nc-approach', 'approach-title', 'Our neurohormone approach', 'Moving beyond labels and into clarity', 'At Refocus, we understand the intricate connection between hormones, mental health, and neurodiversity.',
             features([('i-venus', 'Hormonal understanding', 'Hormones influence brain networks, not just physical symptoms.'),
                       ('i-puzzle', 'Neurodiversity screening', 'ADHD and autism are often identified for the first time during perimenopause.'),
-                      ('i-heart', 'Mental health assessment', 'Burnout can look like depression — but requires a very different response.'),
+                      ('i-heart', 'Mental health assessment', 'Burnout can look like depression, but requires a very different response.'),
                       ('i-brain', 'Objective brain data', f'<a href="{QEEG}">qEEG brain mapping</a> where helpful for deeper clarity.')], cols=4), center=True, dark=True),
         sec('nc-assess', 'assess-title', 'Step by step', 'What happens in a Refocus neurohormone assessment', '',
             steps([('Step 1', 'Book your virtual assessment', '<p>Book online with secure access to your Medesk patient portal. Questionnaires are sent automatically before your appointment. Appointments are delivered virtually and led by our Advanced Nurse Practitioner and Women’s NeuroHormone Service Lead (PhD in perimenopause).</p>'),
                    ('Step 2', 'Screening questionnaires', '<p>Your questionnaires help us map symptoms properly before we meet. This includes:</p>' + ul(['Menopause &amp; hormonal symptom mapping (MRS, Greene Scale, MENQOL)', 'Mental health screening (PHQ-9, GAD-7)', 'Stress &amp; burnout assessment', 'Neurodiversity screening (ADHD &amp; autism)', 'Sleep &amp; cognitive impact assessments'])),
-                   ('Step 3', 'Your virtual clinical assessment', '<p>Your 60–75 minute consultation focuses on symptom onset, cognitive changes, sleep, stress, and neurodevelopmental traits. By the end, you’ll have a clear working formulation, an understanding of what may be hormonal, neurodivergent, or stress-related, and a personalised care plan.</p>'),
+                   ('Step 3', 'Your virtual clinical assessment', '<p>Your 60-75 minute consultation focuses on symptom onset, cognitive changes, sleep, stress, and neurodevelopmental traits. By the end, you’ll have a clear working formulation, an understanding of what may be hormonal, neurodivergent, or stress-related, and a personalised care plan.</p>'),
                    ('Step 4', 'Home blood tests (if appropriate)', '<p>Where blood tests add value, we arrange hormone home testing through Forth. Results are reviewed and interpreted in context, not in isolation.</p>'),
                    ('Step 5', 'Optional qEEG brain mapping', '<p>For women with significant cognitive symptoms, emotional dysregulation, or neurodiversity questions, qEEG brain mapping may be recommended. It helps us understand attention networks, stress circuits, cognitive fatigue patterns, and brain features often seen in ADHD-like profiles.</p>'),
                    ('Step 6', 'Integrated NeuroHormone plan', f'<p>We bring together clinical history, questionnaire profiles, blood results, and qEEG findings. Your plan may include hormonal pathway guidance, neurodivergent women’s support, brain-based interventions (<a href="{NF}">neurofeedback</a>, <a href="{PBM}">photobiomodulation</a>, <a href="{EXO}">Exomind TMS</a>), and psychological strategies.</p>')],
@@ -459,7 +459,7 @@ def neurohormone():
         sec('nc-why', 'why-title', 'Why Refocus', 'Why choose Refocus NeuroHormone Clinic™?', '',
             split(team(['williams']),
                   ul(['Neurodiversity-aware menopause care', 'Evidence-based questionnaires and formulation', 'Integrated care across Refocus Care, Neuroscience &amp; Diagnostics', 'Mental health-led, not symptom-dismissive', 'Optional objective brain mapping', 'Designed for women who want answers, not assumptions'], 'dx-tick-list'), cls='nc-why-split'), deco=wave('left')),
-        sec('dx-how', 'how-title', 'Book your assessment', 'Book your assessment', 'If you feel like your brain has changed — and you want a thoughtful explanation that fits your experience — we’re here.',
+        sec('dx-how', 'how-title', 'Book your assessment', 'Book your assessment', 'If you feel like your brain has changed, and you want a thoughtful explanation that fits your experience, we’re here.',
             split(booking([('Complete a short screening', 'So we match you to the most appropriate service.'),
                            ('Pay a £100 deposit', 'This unlocks secure access to our clinical portal (Medesk).'),
                            ('Complete online forms', 'Screening questionnaires and forms through your portal.'),
@@ -537,7 +537,7 @@ def meds():
                             ('i-path', 'Careful initiation &amp; titration', 'Starting gently and adjusting carefully to find what works for you.'),
                             ('i-calendar', 'Regular monitoring', 'Regular monitoring appointments with side-effect and response tracking.'),
                             ('i-people', 'GP shared care', 'Communication with your GP regarding shared care where appropriate.')], cols=1)), deco=wave('right')),
-        sec('nc-standards', 'std-title', 'Our standards', 'We follow national prescribing standards', 'Our aim is stability, safety and sustainable improvement — not rushed prescribing.',
+        sec('nc-standards', 'std-title', 'Our standards', 'We follow national prescribing standards', 'Our aim is stability, safety and sustainable improvement, not rushed prescribing.',
             features([('i-heart', 'Physical health screening', 'Physical health screening prior to initiation.'),
                       ('i-shield', 'Ongoing safety monitoring', 'Blood pressure, heart rate, weight and wellbeing reviewed throughout.'),
                       ('i-book', 'Clear documentation', 'Clear records you and your GP can rely on.'),
@@ -572,7 +572,7 @@ def hrt():
                             ('i-puzzle', 'Neurodivergence-informed care', 'Care that understands how ADHD and autistic traits can change during hormonal transition.')], cols=1)), deco=wave('right')),
         sec('nc-today', 'today-title', 'Available now', 'Start with a NeuroHormone assessment', 'Our Women’s Neurohormone pathway is a specialist consultation service exploring how ADHD, perimenopause, mood, brain fog and sleep interact. Where appropriate, treatment options may include:',
             chips(['ADHD medication optimisation', 'HRT discussion and prescribing (pending CQC registration)', 'Lifestyle and sleep regulation strategies', 'Cognitive and brain-health recommendations'], 'dx-chips dx-chips-lg') +
-            statement('Our focus is safety, clarity and evidence-informed decision-making — not trend-driven treatment.') +
+            statement('Our focus is safety, clarity and evidence-informed decision-making, not trend-driven treatment.') +
             f'<div class="btn-row nc-center"><a class="btn btn-primary btn-lg" href="{NHC}">Visit the NeuroHormone Clinic</a><a class="text-link" href="{WOMEN}">ADHD and perimenopause <svg><use href="#i-right"/></svg></a></div>', center=True, dark=True),
         sec('dx-team-sec', 'team-title', 'Meet the lead', 'Led by our Women’s NeuroHormone Service Lead', '', team(['williams', 'vrajitoriu'])),
         faq([CARE_FAQS[1], CARE_FAQS[0]], 'FAQ'),

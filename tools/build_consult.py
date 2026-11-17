@@ -51,7 +51,7 @@ def page():
         <div class="fc-copy">
           <p class="kicker">Help us guide you to the right pathway</p>
           <h2>Speak directly with a specialist</h2>
-          <p class="lede">At Refocus, we combine clinical expertise with advanced brain technologies to move beyond guesswork — and towards precision, personalised care.</p>
+          <p class="lede">At Refocus, we combine clinical expertise with advanced brain technologies to move beyond guesswork, and towards precision, personalised care.</p>
           <div class="fc-details">
             <p class="kicker">Consultation details</p>
             <h3>15-minute free online consultation</h3>
@@ -68,7 +68,7 @@ def page():
             steps([('Step 1', 'Send your details', '<p>Complete the short form with your name, contact details and how you heard about us.</p>'),
                    ('Step 2', 'We arrange your call', '<p>Our team gets in touch to find a time that suits you for your short online session.</p>'),
                    ('Step 3', 'Talk it through', '<p>A Refocus specialist listens to your concerns in a confidential conversation and explains how our approach may support you.</p>'),
-                   ('Step 4', 'Your next steps', '<p>You leave with guidance on possible next steps — whether that is an assessment, brain mapping or ongoing care — with no obligation to book.</p>')],
+                   ('Step 4', 'Your next steps', '<p>You leave with guidance on possible next steps, whether that is an assessment, brain mapping or ongoing care, with no obligation to book.</p>')],
                   img='/img/hero-consult.webp')),
         REVIEWS,
         REGULATED,
