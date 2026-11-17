@@ -350,6 +350,8 @@
 .ah-prod p { color: var(--ink-soft); }
 .ah-best { margin: 4px 0 22px; padding: 14px 16px; border-radius: var(--r-sm); background: var(--porcelain); color: var(--navy); font-size: 0.95rem; }
 .ah-buy { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+.ah-buy .btn { margin-left: auto; }
+.ah-buy .text-link { flex-basis: 100%; }
 .ah-price strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 2.6rem; line-height: 1; color: var(--navy); }
 .ah-price span { font-size: 0.85rem; color: var(--ink-soft); }
 .ah-buy .text-link { color: var(--turquoise); }
@@ -846,3 +848,4 @@
 @media (max-width: 620px) { .fc-who { grid-template-columns: 1fr 1fr; } .fc-facts { grid-template-columns: 1fr; } }
 @media (max-width: 400px) { .fc-who { grid-template-columns: 1fr; } }
 .fc-next .dx-steps-media img { object-position: 70% center; }
+@media (max-width: 560px) { .ah-buy .btn { margin-left: 0; width: 100%; justify-content: center; } }
