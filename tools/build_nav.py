@@ -24,8 +24,9 @@ MENU = [
      ('Learn with us', [('Brain Learning Hub', '/learning-page/'), ('Neuro blog', '/neuro-blog/')]),
   ]),
   ('About us', '/about-us/', [
-     ('Refocus', [('About us', '/about-us/'), ('Our team', '/about-us/#team'), ('Contact us', '/contact/')]),
+     ('Refocus', [('About us', '/about-us/'), ('Our team', '/about-us/#team')]),
   ]),
+  ('Contact', '/contact/', None),
 ]
 
 # Sections kept in MENU but not shown in the menu for now. Remove a label to show it again.
