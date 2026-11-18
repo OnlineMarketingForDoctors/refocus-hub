@@ -40,7 +40,7 @@ def build(slug, title, desc, hero_img, main, current=None):
     top = top.replace('src="img/', 'src="/img/')
     # Mark this page in the menu, and its section's top-level link
     top = top.replace(f'<a href="/{slug}/">', f'<a href="/{slug}/" aria-current="page">')
-    if current:
+    if current and 'aria-current="page"' not in top:
         if f'<li class="has-sub"><a href="{current}">' in top:
             top = top.replace(f'<li class="has-sub"><a href="{current}">', f'<li class="has-sub"><a href="{current}" aria-current="page">', 1)
         else:

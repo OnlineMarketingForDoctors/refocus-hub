@@ -13,22 +13,15 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_pages import build, hero, REPO  # noqa: E402
 
-GROUPS = [
-    ('Start here', ['/', '/free-consultation/', '/prices/', '/contact/']),
-    ('Assessments', ['/diagnosis-main-page/', '/diagnosis-main-page/child-adolescent-adhd/', '/diagnosis-main-page/child-adolescent-autism-asd/',
-                     '/diagnosis-main-page/combined-adhd-asd/', '/diagnosis-main-page/child-adolescent-psychiatric/', '/adult-adhd-assessment/',
-                     '/adult-autism-assessment/', '/care-main-page/adhd-assessments-for-women-approaching-perimenopause/']),
-    ('Neuroscience', ['/neuroscience-main-page/', '/neuroscience-main-page/qeeg-brain-mapping/', '/neuroscience-main-page/exomind/',
-                      '/neuroscience-main-page/neurofeedback/', '/neuroscience-main-page/photobiomodulation/', '/at-home-brain-therapy-2/']),
-    ('Brain care', ['/care-main-page/', '/neurohormone-clinic/', '/care-main-page/adhd-medication-treatment-pathway/', '/care-main-page/hrt-treatment-pathway/']),
-    ('Learn', ['/learning-page/', '/neuro-blog/']),
-    ('About', ['/about-us/']),
-]
-# Sections hidden from the main menu (the HIDDEN set in build_nav.py) are left out of the site map too.
-_nav = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'build_nav.py'), encoding='utf8').read()
-HIDDEN = set(re.findall(r"'([^']+)'", re.search(r'^HIDDEN = \{(.*?)\}', _nav, re.M).group(1)))
+from build_nav import MENU, UNLISTED  # noqa: E402
 
-ICONS = {'Start here': 'i-compass', 'Assessments': 'i-doc', 'Neuroscience': 'i-brain', 'Brain care': 'i-heart', 'Learn': 'i-book', 'About': 'i-people', 'Articles': 'i-book'}
+GROUPS = [('Start here', ['/', '/free-consultation/'])]
+for _label, _href, _groups in MENU:
+    _urls = [_href] + [h for _, items in (_groups or []) for _, h in items]
+    GROUPS.append((_label, list(dict.fromkeys(u.split('#')[0] for u in _urls))))
+
+ICONS = {'Start here': 'i-compass', 'About Us': 'i-people', 'ADHD': 'i-brain', 'ASD': 'i-puzzle', 'Mental Health': 'i-heart', 'Neuroscience': 'i-wave',
+         'Treatments': 'i-leaf', 'Pricing': 'i-gift', 'Brain Learning Hub': 'i-book', 'Contact': 'i-phone', 'Articles': 'i-book'}
 
 
 def pages():
@@ -46,9 +39,12 @@ def pages():
 
 def page():
     found = pages()
-    listed = {u for _, us in GROUPS for u in us}
-    groups = [(g, [u for u in us if u in found]) for g, us in GROUPS if g not in HIDDEN]
-    extra = sorted(u for u in found if u not in listed)
+    seen, groups = set(), []
+    for g, us in GROUPS:  # a page shared by two menu sections is listed once, under the first
+        keep = [u for u in us if u in found and u not in seen and u not in UNLISTED]
+        seen.update(keep)
+        groups.append((g, keep))
+    extra = sorted(u for u in found if u not in seen and u not in UNLISTED)
     if extra:
         groups.append(('Articles', extra))
     cards = ''

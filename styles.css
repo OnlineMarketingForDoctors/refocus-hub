@@ -133,7 +133,7 @@ p { margin: 0 0 1em; }
   .header-phone strong { font-size: 1.1rem; }
   .brand { width: 140px; }
 }
-@media (max-width: 1020px) {
+@media (max-width: 1399px) {
   :root { --header-h: 72px; }
   .site-header.is-scrolled { --header-h: 68px; }
   .header-inner { grid-template-columns: 1fr auto; gap: 12px; }
@@ -702,8 +702,8 @@ a.svc .svc-body { padding-right: 70px; }
 .main-nav .sub .sub-overview { margin-top: 10px; padding-top: 14px; border-top: 1px solid rgba(0, 19, 49, 0.08); border-radius: 0; color: var(--raspberry); font-weight: 800; font-size: 0.85rem; letter-spacing: 0.04em; }
 .main-nav .sub .sub-overview:hover { background: none; color: var(--navy); }
 .main-nav .has-sub:has(.sub a[aria-current="page"]) > a::after { transform: scaleX(1); }
-@media (max-width: 1180px) and (min-width: 1021px) { .main-nav ul { gap: 12px; } .main-nav a { font-size: 0.78rem; letter-spacing: 0.05em; } }
-@media (max-width: 1020px) {
+@media (max-width: 1679px) and (min-width: 1400px) { .main-nav > ul { gap: 10px; } .main-nav > ul > li > a { font-size: 0.76rem; letter-spacing: 0.04em; } }
+@media (max-width: 1399px) {
   .main-nav { max-height: calc(100vh - var(--header-h)); overflow-y: auto; overscroll-behavior: contain; }
   .main-nav > ul > li { flex-wrap: wrap; border-bottom: 1px solid var(--line); }
   .main-nav > ul > li > a { flex: 1; border-bottom: 0; }
@@ -717,17 +717,17 @@ a.svc .svc-body { padding-right: 70px; }
   .main-nav .sub-col + .sub-col { margin-top: 10px; }
   .main-nav .sub a, .site-header.is-scrolled .main-nav .sub a { padding: 10px 12px; border-bottom: 0; font-size: 0.98rem; white-space: normal; }
 }
-@media (min-width: 1021px) {
+@media (min-width: 1400px) {
   .main-nav > ul { gap: clamp(8px, 1.3vw, 24px); }
   .main-nav > ul > li > a { white-space: nowrap; }
   .header-inner { gap: 18px; }
 }
-@media (max-width: 1360px) and (min-width: 1021px) {
+@media (max-width: 1679px) and (min-width: 1400px) {
   .header-phone { display: none; }
   .main-nav > ul > li > a { font-size: 0.78rem; letter-spacing: 0.05em; }
   .header-actions .btn { white-space: nowrap; }
 }
-@media (max-width: 1160px) and (min-width: 1021px) {
+@media (max-width: 1559px) and (min-width: 1400px) {
   .brand { width: 118px; }
   .header-inner { gap: 12px; }
   .main-nav > ul { gap: 6px; }

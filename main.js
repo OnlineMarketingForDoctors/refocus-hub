@@ -81,7 +81,7 @@
       li.classList.toggle('is-open', open);
       btn.setAttribute('aria-expanded', String(open));
     });
-    li.addEventListener('mouseleave', function () { if (window.matchMedia('(min-width: 1021px)').matches) closeSubs(); });
+    li.addEventListener('mouseleave', function () { if (window.matchMedia('(min-width: 1400px)').matches) closeSubs(); });
   });
   document.addEventListener('click', function (e) { if (!e.target.closest('.main-nav')) closeSubs(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSubs(); });
