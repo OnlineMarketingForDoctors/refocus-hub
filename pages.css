@@ -881,3 +881,4 @@
 .ar-promo-link svg { width: 14px; height: 14px; }
 .ar-promo-link:hover { color: #fff; }
 @media (max-width: 1000px) { .ar-promo { display: none; } }
+.dx-split-copy > * + .dx-price, .dx-solo > * + .dx-price { margin-top: 32px; }
