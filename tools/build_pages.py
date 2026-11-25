@@ -374,13 +374,13 @@ def contact_page():
 
     <!-- ===== Map ===== -->
     <section class="ct-map" id="find-us" aria-labelledby="map-title">
-      <iframe title="Map showing Refocus The Brain Hub at 6 Oxford Place, Manchester" src="https://maps.google.com/maps?q=53.457321806912375%2C%20-2.221189831449663&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe title="Refocus The Brain Hub on Google Maps, 6 Oxford Place, Manchester" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2375.628190263757!2d-2.2211791!3d53.4572324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb15447b5b9a1%3A0x23a17b1081094834!2sRefocus%20-%20The%20Brain%20Hub%20%7C%20ADHD%20Assessment%20Manchester!5e0!3m2!1sen!2smx!4v1795641061017!5m2!1sen!2smx" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       <div class="wrap">
         <div class="ct-map-card">
           <img src="/img/logo.webp" alt="Refocus The Brain Hub" width="400" height="137" loading="lazy">
           <h2 id="map-title">We’re based just a short walk from Manchester Royal Hospital.</h2>
           <p class="ct-addr"><svg><use href="#i-pin"/></svg>6 Oxford Place, Manchester, M14 5RZ United Kingdom</p>
-          <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=53.457321806912375,-2.221189831449663">Get directions</a>
+          <div class="btn-row"><a class="btn btn-primary" href="https://maps.app.goo.gl/cz7nrZcHDH2zS1cA6" target="_blank" rel="noopener">View on Google</a><a class="text-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=53.4572324,-2.2211791" target="_blank" rel="noopener">Get directions <svg><use href="#i-right"/></svg></a></div>
         </div>
       </div>
     </section>
