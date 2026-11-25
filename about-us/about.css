@@ -171,3 +171,5 @@
 .ab-join-note { margin-top: 12px; font-size: 0.9rem; color: var(--ink-soft); }
 @media (max-width: 900px) { .ab-join-grid { grid-template-columns: 1fr; } .ab-join-media { max-width: 560px; } }
 @media (max-width: 520px) { .ab-benefits { grid-template-columns: 1fr; } }
+.ab-founder-media .ab-founder-portrait { object-position: center 12%; background: #fff; }
+.ab-message .ab-msg-img { object-position: center; }
