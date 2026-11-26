@@ -747,9 +747,9 @@ a.svc .svc-body { padding-right: 70px; }
   .header-actions { grid-area: actions; justify-self: end; gap: 26px; }
   .main-nav { grid-area: nav; justify-self: end; }
   .main-nav > ul { justify-content: flex-end; }
-  .header-phone { display: flex; flex-direction: row; align-items: baseline; gap: 10px; white-space: nowrap; }
-  .header-phone small { display: inline; }
-  .header-phone strong { font-size: 1.2rem; }
+  .header-phone { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; line-height: 1; white-space: nowrap; }
+  .header-phone small { display: block; font-size: 0.64rem; letter-spacing: 0.14em; }
+  .header-phone strong { font-size: 1.2rem; line-height: 1.05; }
   .header-actions .btn { min-height: 44px; padding: 0.7em 1.4em; font-size: 0.8rem; white-space: nowrap; }
   .site-header .main-nav .sub { padding-top: 10px; }
 }
