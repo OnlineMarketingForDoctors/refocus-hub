@@ -723,7 +723,6 @@ a.svc .svc-body { padding-right: 70px; }
   .header-inner { gap: 18px; }
 }
 @media (max-width: 1679px) and (min-width: 1400px) {
-  .header-phone { display: none; }
   .main-nav > ul > li > a { font-size: 0.78rem; letter-spacing: 0.05em; }
   .header-actions .btn { white-space: nowrap; }
 }
@@ -738,3 +737,19 @@ a.svc .svc-body { padding-right: 70px; }
 
 /* Women's brain health section keeps its pink accents */
 .women .kicker { color: var(--raspberry); }
+
+/* Desktop header: phone and booking button on their own row above the menu */
+@media (min-width: 1400px) {
+  :root { --header-h: 124px; }
+  .site-header.is-scrolled { --header-h: 108px; }
+  .header-inner { grid-template-columns: auto 1fr; grid-template-rows: auto auto; grid-template-areas: "brand actions" "brand nav"; align-content: center; row-gap: 6px; column-gap: 32px; }
+  .brand { grid-area: brand; align-self: center; width: 176px; }
+  .header-actions { grid-area: actions; justify-self: end; gap: 26px; }
+  .main-nav { grid-area: nav; justify-self: end; }
+  .main-nav > ul { justify-content: flex-end; }
+  .header-phone { display: flex; flex-direction: row; align-items: baseline; gap: 10px; white-space: nowrap; }
+  .header-phone small { display: inline; }
+  .header-phone strong { font-size: 1.2rem; }
+  .header-actions .btn { min-height: 44px; padding: 0.7em 1.4em; font-size: 0.8rem; white-space: nowrap; }
+  .site-header .main-nav .sub { padding-top: 10px; }
+}
